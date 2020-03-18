@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Dust of the centuries</title>
+</head>
+<body>
+    <header>
+        <canvas class="canvas-header" width="1000" height="1000">
+            К сожалению, ваш браузер яляется устаревшим 
+            и не поддерживает необходимые для данного сайта технологии, 
+            пожалуйста, скачайте новую версию Chrome по 
+            <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a> 
+        </canvas>
+        <h1>Пыль веков</h1>
+        <p class="quote">
+            Время открывает истину
+            <br>
+            <b>Сенека</b>
+        </p>
+        <button class="btn take-test-btn">
+            Пройти тест
+        </button>
+        <button class="btn arrow-down-btn"><img src="img/arrow.svg" alt="↓"></button>
+    </header>
+
+    <main>
+        <div class="sections" data-position="0">
+            <section class="ancient-period period-0 time-period" data-number="0">
+                <h2 class="head-text">Древний мир</h2>
+                <ul class="information-list">
+                    <li>Зарождение цивилизации</li>
+                    <li class="information-right">Изобретени колеса</li>
+                    <li>Первая письменность</li>
+                    <li class="information-right">Первые религии</li>
+                </ul>
+                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <span class="swiper-arrows"></span>
+            </section>
+            <section class="antiquity-period period-1 time-period" data-number="1">
+                <h2 class="head-text">Античность</h2>
+                <ul class="information-list">
+                    <li>Возникновение Рима</li>
+                    <li class="information-right">Зарождение наук</li>
+                    <li>Идеи гуманизма</li>
+                    <li class="information-right">Юпитер и Зевс</li>
+                </ul>
+                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <span class="swiper-arrows"></span>
+            </section>
+            <section class="middle-ages-period period-2 time-period" data-number="2">
+                <h2 class="head-text">Средние века</h2>
+                <ul class="information-list">
+                    <li>Короли и феодалы</li>
+                    <li class="information-right">Эпоха возрождения</li>
+                    <li>Войны и крестовые походы</li>
+                    <li class="information-right">Католицизм и православие</li>
+                </ul>
+                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <span class="swiper-arrows"></span>
+            </section>
+            <section class="new-time-period period-3 time-period" data-number="3">
+                <h2 class="head-text">Новое время</h2>
+                <ul class="information-list">
+                    <li>Революции и реформации</li>
+                    <li class="information-right">Великие географические открытия</li>
+                    <li>Колониальные войны</li>
+                    <li class="information-right">Лютеранство и протестантизм</li>
+                </ul>
+                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <span class="swiper-arrows"></span>
+            </section>
+            <section class="modern-period period-4 time-period" data-number="4">
+                <h2 class="head-text">Новейшее время</h2>
+                <ul class="information-list">
+                    <li>Антиколониальные движения</li>
+                    <li class="information-right">Интернет и полеты в космос</li>
+                    <li>Мировые войны</li>
+                    <li class="information-right">Религиозное многообразие</li>
+                </ul>
+                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <span class="swiper-arrows"></span>
+            </section>
+        </div>   
+        <div class="time-straight">
+            <ul class="time-straight__periods">
+                <li class="ancient time-straight__period-0" data-number="0">Древность</li>
+                <li class="antiquity time-straight__period-1" data-number="1">Античность</li>
+                <li class="middle-ages  time-straight__period-2" data-number="2">Средние&nbsp;века</li>
+                <li class="new-time  time-straight__period-3" data-number="3">Новое&nbsp;время</li>
+                <li class="modern  time-straight__period-4" data-number="4">Современность</li>
+            </ul>
+            <span class="time-arrow"></span>
+            <span class="christ-birth">Р.Х.</span>
+            <span class="period-focus"></span>
+        </div>
+    </main>
+    <script defer src="js/canvas.js"></script>
+    <script defer src="js/script.js"></script>
+</body>
+</html>
