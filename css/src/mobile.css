@@ -4,9 +4,16 @@
 html {
   font-size: 30px;
   --font-color-light: #f0f0f0;
-  --first-color-ancient: #45322E;
+  --first-color-ancient: #5A3D30;
+  --font-color-ancient: #45322E;
   --first-color-antiquity: #dcdcdc;
   --font-color-antiquity: #909090;
+  --first-color-middle-ages: #99958C;
+  --font-color-middle-ages: #606060;
+  --first-color-new-time: #4D7198;
+  --font-color-new-time: #395778;
+  --first-color-modern: #7442C8;
+  --font-color-modern: #423189;
 }
 
 body, html {
@@ -20,6 +27,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 header {
@@ -167,8 +182,8 @@ main .sections .time-period::before {
   height: inherit;
   z-index: -1;
   background-size: cover;
-  -webkit-filter: blur(6px) brightness(45%);
-          filter: blur(6px) brightness(45%);
+  -webkit-filter: blur(8px) brightness(45%);
+          filter: blur(8px) brightness(45%);
 }
 
 main .sections .time-period .swiper-arrows::before, main .sections .time-period .swiper-arrows::after {
@@ -230,9 +245,11 @@ main .sections .modern-period .swiper-arrows::after {
 main .time-straight {
   --time-color: var(--first-color-ancient);
   --next-time-color: var(--first-color-antiquity);
+  --font-color: var(--font-color-ancient);
   margin: 2rem auto;
   width: 86.5vw;
   position: relative;
+  cursor: pointer;
 }
 
 main .time-straight .time-straight__periods {
@@ -244,12 +261,15 @@ main .time-straight .time-straight__periods {
   top: -1.33rem;
   font-family: 'Russo One';
   font-size: .67rem;
-  color: var(--time-color);
+  color: var(--font-color);
   padding-left: 1.33rem;
 }
 
 main .time-straight .time-straight__periods li {
   text-align: center;
+  position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 main .time-straight .time-straight__periods .ancient {
@@ -262,14 +282,17 @@ main .time-straight .time-straight__periods .antiquity {
 
 main .time-straight .time-straight__periods .middle-ages {
   width: 15.3vw;
+  margin-left: -2vw;
 }
 
 main .time-straight .time-straight__periods .new-time {
   width: 12.5vw;
+  margin-left: -1.5vw;
 }
 
 main .time-straight .time-straight__periods .modern {
   width: 6.95vw;
+  margin-left: -4vw;
 }
 
 main .time-straight .time-arrow {
@@ -321,6 +344,9 @@ main .time-straight .period-focus {
   width: 27.78vw;
   bottom: 1.43rem;
   height: .667rem;
+  left: 0;
   border-radius: .667rem;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 /*# sourceMappingURL=mobile.css.map */

@@ -73,9 +73,17 @@
                 background-position: 0 -2rem;
             }
         }
-        div.time-straight {
-            margin-top: 1rem;
-        }
+    }
+    main div.time-straight {
+        margin-top: 1.5rem;
+        ul.time-straight__periods{
+            li.modern, li.new-time, li.middle-ages {
+                margin-left: 0;
+            }
+            li.modern {
+                margin-left: -.65vw;
+            }
+        } 
     }
 }
 

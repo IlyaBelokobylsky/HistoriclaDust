@@ -59,8 +59,14 @@
   main div.sections section.time-period::before {
     background-position: 0 -2rem;
   }
-  main div.sections div.time-straight {
-    margin-top: 1rem;
+  main div.time-straight {
+    margin-top: 1.5rem;
+  }
+  main div.time-straight ul.time-straight__periods li.modern, main div.time-straight ul.time-straight__periods li.new-time, main div.time-straight ul.time-straight__periods li.middle-ages {
+    margin-left: 0;
+  }
+  main div.time-straight ul.time-straight__periods li.modern {
+    margin-left: -.65vw;
   }
 }
 

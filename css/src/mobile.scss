@@ -4,9 +4,21 @@
 html {
     font-size: 30px;
     --font-color-light: #f0f0f0;
-    --first-color-ancient: #45322E;
+
+    --first-color-ancient: #5A3D30;
+    --font-color-ancient: #45322E;
+
     --first-color-antiquity: #dcdcdc;
     --font-color-antiquity: #909090;
+
+    --first-color-middle-ages: #99958C;
+    --font-color-middle-ages: #606060;
+
+    --first-color-new-time: #4D7198;
+    --font-color-new-time: #395778;
+    
+    --first-color-modern: #7442C8;
+    --font-color-modern: #423189;
 }
 
 
@@ -19,6 +31,12 @@ ul {
 }
 a {
     text-decoration: none;
+}
+.hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
 }
 
 header {
@@ -146,7 +164,7 @@ main {
                 height: inherit;
                 z-index: -1;
                 background-size: cover;
-                filter: blur(6px) brightness(45%);
+                filter: blur(8px) brightness(45%);
             }
             .swiper-arrows {
                 &::before, &::after {
@@ -208,11 +226,11 @@ main {
     .time-straight {
         --time-color: var(--first-color-ancient);
         --next-time-color: var(--first-color-antiquity);
+        --font-color: var(--font-color-ancient);
         margin: 2rem auto;
         width: 86.5vw;
-
         position: relative;
-
+        cursor: pointer;
         .time-straight__periods {
             display: flex; 
             position: absolute;
@@ -220,10 +238,12 @@ main {
             top: -1.33rem;
             font-family: 'Russo One';
             font-size: .67rem;
-            color: var(--time-color);
+            color: var(--font-color);
             padding-left: 1.33rem;
             li {
                 text-align: center;
+                position: relative;
+                transition: .5s ease-in-out;
             }
 
             .ancient {
@@ -234,12 +254,15 @@ main {
             }
             .middle-ages {
                 width: 15.3vw;
+                margin-left: -2vw;
             }
             .new-time {
                 width: 12.5vw;
+                margin-left: -1.5vw;
             }
             .modern {
                 width: 6.95vw;
+                margin-left: -4vw;
             }
         }
 
@@ -290,7 +313,9 @@ main {
             width: 27.78vw;
             bottom: 1.43rem;
             height: .667rem;
+            left: 0;
             border-radius: .667rem;
+            transition: .5s ease-in-out;
         }
     }
 }

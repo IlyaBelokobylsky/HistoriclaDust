@@ -4,9 +4,16 @@
 html {
   font-size: 30px;
   --font-color-light: #f0f0f0;
-  --first-color-ancient: #45322E;
+  --first-color-ancient: #5A3D30;
+  --font-color-ancient: #45322E;
   --first-color-antiquity: #dcdcdc;
   --font-color-antiquity: #909090;
+  --first-color-middle-ages: #99958C;
+  --font-color-middle-ages: #606060;
+  --first-color-new-time: #4D7198;
+  --font-color-new-time: #395778;
+  --first-color-modern: #7442C8;
+  --font-color-modern: #423189;
 }
 
 body, html {
@@ -20,6 +27,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 header {
@@ -103,7 +118,7 @@ main .sections .time-period {
   color: var(--font-color-light);
   position: relative;
   width: 100vw;
-  height: 85vh;
+  height: 88.5vh;
 }
 
 main .sections .time-period .head-text {
@@ -167,8 +182,8 @@ main .sections .time-period::before {
   height: inherit;
   z-index: -1;
   background-size: cover;
-  -webkit-filter: blur(6px) brightness(45%);
-          filter: blur(6px) brightness(45%);
+  -webkit-filter: blur(8px) brightness(45%);
+          filter: blur(8px) brightness(45%);
 }
 
 main .sections .time-period .swiper-arrows::before, main .sections .time-period .swiper-arrows::after {
@@ -230,9 +245,11 @@ main .sections .modern-period .swiper-arrows::after {
 main .time-straight {
   --time-color: var(--first-color-ancient);
   --next-time-color: var(--first-color-antiquity);
+  --font-color: var(--font-color-ancient);
   margin: 2rem auto;
   width: 86.5vw;
   position: relative;
+  cursor: pointer;
 }
 
 main .time-straight .time-straight__periods {
@@ -244,12 +261,15 @@ main .time-straight .time-straight__periods {
   top: -1.33rem;
   font-family: 'Russo One';
   font-size: .67rem;
-  color: var(--time-color);
+  color: var(--font-color);
   padding-left: 1.33rem;
 }
 
 main .time-straight .time-straight__periods li {
   text-align: center;
+  position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 main .time-straight .time-straight__periods .ancient {
@@ -262,14 +282,17 @@ main .time-straight .time-straight__periods .antiquity {
 
 main .time-straight .time-straight__periods .middle-ages {
   width: 15.3vw;
+  margin-left: -2vw;
 }
 
 main .time-straight .time-straight__periods .new-time {
   width: 12.5vw;
+  margin-left: -1.5vw;
 }
 
 main .time-straight .time-straight__periods .modern {
   width: 6.95vw;
+  margin-left: -4vw;
 }
 
 main .time-straight .time-arrow {
@@ -321,7 +344,112 @@ main .time-straight .period-focus {
   width: 27.78vw;
   bottom: 1.43rem;
   height: .667rem;
+  left: 0;
   border-radius: .667rem;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+@media (max-width: 690px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 850px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 993px) {
+  html {
+    font-size: 17px;
+  }
+  header h1 {
+    margin-left: 5rem;
+  }
+  header .quote {
+    margin-top: -1.5rem;
+    margin-left: 11.4rem;
+  }
+  main div.sections {
+    -webkit-transition: left .85s ease-in-out;
+    transition: left .85s ease-in-out;
+  }
+  main div.sections section.time-period {
+    height: 85vh;
+  }
+  main div.sections section.time-period .head-text {
+    font-family: 'Russo one';
+    font-size: 3rem;
+    text-align: center;
+    max-width: 95%;
+    margin-top: 3rem;
+  }
+  main div.sections section.time-period .information-list {
+    font-size: 1.5rem;
+  }
+  main div.sections section.time-period .information-list li {
+    margin-top: .75rem;
+  }
+  main div.sections section.time-period .goto-period {
+    margin: 1.5rem auto 0;
+  }
+  main div.sections section.time-period::before {
+    background-position: 0 -2rem;
+  }
+  main div.time-straight {
+    margin-top: 1.5rem;
+  }
+  main div.time-straight ul.time-straight__periods li.modern, main div.time-straight ul.time-straight__periods li.new-time, main div.time-straight ul.time-straight__periods li.middle-ages {
+    margin-left: 0;
+  }
+  main div.time-straight ul.time-straight__periods li.modern {
+    margin-left: -.45vw;
+  }
+}
+
+@media (min-width: 1160px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1919px) {
+  html {
+    font-size: 28px;
+  }
 }
 
 .btn {
@@ -401,98 +529,5 @@ main .time-straight .period-focus {
 .arrow-down-btn:hover {
   -webkit-transform: translateX(-50%) translateY(0.5rem);
           transform: translateX(-50%) translateY(0.5rem);
-}
-
-@media (max-width: 690px) {
-  html {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  html {
-    font-size: 18px !important;
-  }
-}
-
-@media (max-width: 400px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 850px) {
-  html {
-    font-size: 36px;
-  }
-}
-
-@media (min-width: 993px) {
-  html {
-    font-size: 17px;
-  }
-  header h1 {
-    margin-left: 5rem;
-  }
-  header .quote {
-    margin-top: -1.5rem;
-    margin-left: 11.4rem;
-  }
-  main div.sections {
-    -webkit-transition: left .85s ease-in-out;
-    transition: left .85s ease-in-out;
-  }
-  main div.sections section.time-period .head-text {
-    font-family: 'Russo one';
-    font-size: 3rem;
-    text-align: center;
-    max-width: 95%;
-    margin-top: 3rem;
-  }
-  main div.sections section.time-period .information-list {
-    font-size: 1.5rem;
-  }
-  main div.sections section.time-period .information-list li {
-    margin-top: .75rem;
-  }
-  main div.sections section.time-period .goto-period {
-    margin: 1.5rem auto 0;
-  }
-  main div.sections section.time-period::before {
-    background-position: 0 -1.5rem;
-  }
-  main div.sections div.time-straight {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width: 1160px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1280px) {
-  html {
-    font-size: 21px;
-  }
-}
-
-@media (min-width: 1366px) {
-  html {
-    font-size: 23px;
-  }
-}
-
-@media (min-width: 1440px) {
-  html {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1919px) {
-  html {
-    font-size: 28px;
-  }
 }
 /*# sourceMappingURL=main.css.map */
