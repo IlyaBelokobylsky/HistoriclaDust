@@ -308,7 +308,7 @@ main .time-straight .time-arrow::after {
   display: block;
   position: absolute;
   right: -0.667rem;
-  top: calc(-.333rem - 5px);
+  top: -.6rem;
   border-top: .667rem solid transparent;
   border-left: 1rem solid var(--time-color);
   border-bottom: .667rem solid transparent;
@@ -418,7 +418,7 @@ main .time-straight .period-focus {
     margin-left: 0;
   }
   main div.time-straight ul.time-straight__periods li.modern {
-    margin-left: -.45vw;
+    margin-left: -.65vw;
   }
 }
 
