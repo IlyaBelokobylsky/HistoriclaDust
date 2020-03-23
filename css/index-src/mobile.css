@@ -1,42 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
-html {
-  font-size: 30px;
-  --font-color-light: #f0f0f0;
-  --first-color-ancient: #5A3D30;
-  --font-color-ancient: #45322E;
-  --first-color-antiquity: #dcdcdc;
-  --font-color-antiquity: #909090;
-  --first-color-middle-ages: #99958C;
-  --font-color-middle-ages: #606060;
-  --first-color-new-time: #4D7198;
-  --font-color-new-time: #395778;
-  --first-color-modern: #7442C8;
-  --font-color-modern: #423189;
-}
-
-body, html {
-  overflow-x: hidden;
-  margin: 0;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
 header {
   margin: 0;
   width: 100vw;
@@ -308,7 +272,7 @@ main .time-straight .time-arrow::after {
   display: block;
   position: absolute;
   right: -0.667rem;
-  top: calc(-.333rem - 5px);
+  top: -.6rem;
   border-top: .667rem solid transparent;
   border-left: 1rem solid var(--time-color);
   border-bottom: .667rem solid transparent;

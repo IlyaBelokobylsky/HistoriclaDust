@@ -1,0 +1,52 @@
+html {
+    font-size: 30px;
+    --font-color-light: #f0f0f0;
+
+    --first-color-ancient: #5A3D30;
+    --font-color-ancient: #45322E;
+
+    --first-color-antiquity: #dcdcdc;
+    --font-color-antiquity: #909090;
+
+    --first-color-middle-ages: #99958C;
+    --font-color-middle-ages: #606060;
+
+    --first-color-new-time: #4D7198;
+    --font-color-new-time: #395778;
+    
+    --first-color-modern: #7442C8;
+    --font-color-modern: #423189;
+}
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #232526 0%, #414345 100%);
+    z-index: 999;
+    transition: 1s ease-in-out;
+    .loading-object {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 10rem;
+        transform: translate(-50%, -50%);
+    }
+}

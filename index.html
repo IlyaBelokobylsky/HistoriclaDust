@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Dust of the centuries</title>
 </head>
 <body>
+    <div class="loader">
+        <canvas class="loading-object" width="500" height="500">
+            Пожалуйста, подождите
+        </canvas>
+    </div>
+    <script src="js/loader.js"></script>
     <header>
         <canvas class="canvas-header" width="1000" height="1000">
             К сожалению, ваш браузер яляется устаревшим 
@@ -98,7 +104,7 @@
             <span class="period-focus"></span>
         </div>
     </main>
-    <script defer src="js/canvas.js"></script>
-    <script defer src="js/script.js"></script>
+    <script async src="js/canvas.js"></script>
+    <script defer src="js/index.js"></script>
 </body>
 </html>

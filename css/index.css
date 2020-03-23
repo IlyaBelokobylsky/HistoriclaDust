@@ -37,6 +37,27 @@ a {
   opacity: 1;
 }
 
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #232526 0%, #414345 100%);
+  z-index: 999;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.loader .loading-object {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 10rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 header {
   margin: 0;
   width: 100vw;
@@ -530,4 +551,4 @@ main .time-straight .period-focus {
   -webkit-transform: translateX(-50%) translateY(0.5rem);
           transform: translateX(-50%) translateY(0.5rem);
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
