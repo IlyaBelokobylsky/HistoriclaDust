@@ -1,4 +1,6 @@
 (function () { // prevent mixing of  scopes
+    document.documentElement.style.overflowY = 'hidden';
+
     const loader = document.querySelector('.loader'),
         fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
@@ -25,7 +27,7 @@
         ctx.arc(x, y, r, 0, Math.PI * 2);
         ctx.fill();
         if (hasStroke) {
-            ctx.strokeStyle = '#333333';
+            ctx.strokeStyle = '#222222';
             ctx.lineWidth = 5;
             ctx.stroke();
         }
@@ -44,7 +46,7 @@
     // numbers
     for (let i = 12, j = 0; i > 0; i--, j++) {
         const currentAngle = Math.PI / 2 + Math.PI / 6 * j,
-            radius = 180;
+            radius = 175;
         ctx.beginPath();
         ctx.fillStyle = 'black';
         ctx.font = `normal ${fontSize * 1.5}px Russo One`;
@@ -79,7 +81,7 @@
 
     // hours
     let hoursArrow = {
-        length: 80,
+        length: 75,
         width: 10,
         speed: 3,
         counter: 1,
@@ -88,7 +90,7 @@
 
     // minutes
     let minutesArrow = {
-        length: 140,
+        length: 135,
         width: 5,
         speed: 18,
         counter: 1,
@@ -107,6 +109,9 @@
     window.onload = function () {
         loader.classList.remove('visible');
         loader.classList.add('hidden');
-        setTimeout('loader.style.display = none', 1000)
+        setTimeout(function() {
+            loader.style.display = "none";
+            document.documentElement.style.overflowY = 'visible';
+        }, 1000)
     }
 })();
