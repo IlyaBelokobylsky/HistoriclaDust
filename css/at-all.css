@@ -42,8 +42,8 @@ a {
   height: 100vh;
   background: radial-gradient(50% 50% at 50% 50%, #232526 0%, #414345 100%);
   z-index: 999;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .loader .loading-object {
@@ -53,5 +53,65 @@ a {
   height: 10rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (max-width: 690px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 850px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1160px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1919px) {
+  html {
+    font-size: 28px;
+  }
 }
 /*# sourceMappingURL=at-all.css.map */
