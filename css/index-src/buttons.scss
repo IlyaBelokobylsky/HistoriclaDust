@@ -63,10 +63,37 @@
     bottom: .667rem;
     transform: translateX(-50%);
     transition: .2s ease-in-out;
-    img {
-        height: 1.833rem;
-    }
+    height: 1.833rem;
+    width: 3rem;
     &:hover {
         transform: translateX(-50%) translateY(.5rem);
+    }
+}
+
+
+.goto-period {
+    display: block;
+    width: 9.75rem;
+    max-height: 3rem;
+    padding: .55rem 0;
+    margin: 4rem auto 0;
+    border: 3px solid #FFFFFF;
+    background-color: rgba(51, 51, 51, .33);
+    border-radius: 3rem;
+    color: var(--font-color-light);
+    font-size: 1.2rem;
+    font-family: 'Oswald';
+    text-align: center;
+    .svg-img {
+        height: 1rem;
+        margin-left: .7rem;
+        vertical-align: middle;
+        svg {
+            transition: .2s ease-in-out;
+        }
+    }
+
+    &:hover svg {
+        transform: translateY(.5rem);
     }
 }

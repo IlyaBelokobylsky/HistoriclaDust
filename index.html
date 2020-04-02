@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Dust of the centuries</title>
+    <title>Пыль веков</title>
 </head>
 <body>
     <div class="loader">
@@ -13,6 +13,15 @@
             Пожалуйста, подождите
         </canvas>
     </div>
+
+    <!-- svg image for <use> -->
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="arrow-svg">
+            <path d="M0 0L45 40V55L0 15V0Z"/>
+            <path d="M90 0L45 40V55L90 15V0Z"/>
+        </symbol>
+    </svg>
+
     <script src="js/loader.js"></script>
     <header>
         <canvas class="canvas-header" width="1000" height="1000">
@@ -30,7 +39,11 @@
         <button class="btn take-test-btn">
             Пройти тест
         </button>
-        <button class="btn arrow-down-btn"><img src="img/arrow.svg" alt="↓"></button>
+        <button class="btn arrow-down-btn">
+            <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                <use xlink:href="#arrow-svg" fill="#CDCDCD"/>
+            </svg>
+        </button>
     </header>
 
     <main>
@@ -38,12 +51,19 @@
             <section class="ancient-period period-0 time-period" data-number="0">
                 <h2 class="head-text">Древний мир</h2>
                 <ul class="information-list">
-                    <li>Зарождение цивилизации</li>
+                    <li>Становление патриархата</li>
                     <li class="information-right">Изобретени колеса</li>
                     <li>Первая письменность</li>
                     <li class="information-right">Первые религии</li>
                 </ul>
-                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <a href="ancient.html" class="goto-period">
+                    Перейти
+                    <span class="svg-img">
+                        <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                            <use xlink:href="#arrow-svg" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                </a>
                 <span class="swiper-arrows"></span>
             </section>
             <section class="antiquity-period period-1 time-period" data-number="1">
@@ -54,18 +74,32 @@
                     <li>Идеи гуманизма</li>
                     <li class="information-right">Юпитер и Зевс</li>
                 </ul>
-                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <a href="#" class="goto-period">
+                    Перейти
+                    <span class="svg-img">
+                        <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                            <use xlink:href="#arrow-svg" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                </a>
                 <span class="swiper-arrows"></span>
             </section>
             <section class="middle-ages-period period-2 time-period" data-number="2">
                 <h2 class="head-text">Средние века</h2>
                 <ul class="information-list">
-                    <li>Короли и феодалы</li>
-                    <li class="information-right">Эпоха возрождения</li>
+                    <li>Синьоры и вассалы</li>
+                    <li class="information-right">Начало Ренессанса</li>
                     <li>Войны и крестовые походы</li>
-                    <li class="information-right">Католицизм и православие</li>
+                    <li class="information-right">Христианство и ислам</li>
                 </ul>
-                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <a href="#" class="goto-period">
+                    Перейти
+                    <span class="svg-img">
+                        <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                            <use xlink:href="#arrow-svg" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                </a>
                 <span class="swiper-arrows"></span>
             </section>
             <section class="new-time-period period-3 time-period" data-number="3">
@@ -76,7 +110,14 @@
                     <li>Колониальные войны</li>
                     <li class="information-right">Лютеранство и протестантизм</li>
                 </ul>
-                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <a href="#" class="goto-period">
+                    Перейти
+                    <span class="svg-img">
+                        <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                            <use xlink:href="#arrow-svg" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                </a>
                 <span class="swiper-arrows"></span>
             </section>
             <section class="modern-period period-4 time-period" data-number="4">
@@ -87,7 +128,14 @@
                     <li>Мировые войны</li>
                     <li class="information-right">Религиозное многообразие</li>
                 </ul>
-                <a href="#" class="goto-period">Перейти<img src="img/arrow-white.svg" alt="↓"></a>
+                <a href="#" class="goto-period">
+                    Перейти
+                    <span class="svg-img">
+                        <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                            <use xlink:href="#arrow-svg" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                </a>
                 <span class="swiper-arrows"></span>
             </section>
         </div>   

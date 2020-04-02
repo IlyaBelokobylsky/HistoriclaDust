@@ -1,7 +1,4 @@
 @media (min-width: 993px) {
-  html {
-    font-size: 17px;
-  }
   header h1 {
     margin-left: 5rem;
   }
@@ -42,7 +39,7 @@
     margin-left: 0;
   }
   main div.time-straight ul.time-straight__periods li.modern {
-    margin-left: -.65vw;
+    margin-left: -.8vw;
   }
 }
 /*# sourceMappingURL=media.css.map */

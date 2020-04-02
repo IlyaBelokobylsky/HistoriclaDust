@@ -66,14 +66,43 @@
           transform: translateX(-50%);
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
-}
-
-.arrow-down-btn img {
   height: 1.833rem;
+  width: 3rem;
 }
 
 .arrow-down-btn:hover {
   -webkit-transform: translateX(-50%) translateY(0.5rem);
           transform: translateX(-50%) translateY(0.5rem);
+}
+
+.goto-period {
+  display: block;
+  width: 9.75rem;
+  max-height: 3rem;
+  padding: .55rem 0;
+  margin: 4rem auto 0;
+  border: 3px solid #FFFFFF;
+  background-color: rgba(51, 51, 51, 0.33);
+  border-radius: 3rem;
+  color: var(--font-color-light);
+  font-size: 1.2rem;
+  font-family: 'Oswald';
+  text-align: center;
+}
+
+.goto-period .svg-img {
+  height: 1rem;
+  margin-left: .7rem;
+  vertical-align: middle;
+}
+
+.goto-period .svg-img svg {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.goto-period:hover svg {
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
 }
 /*# sourceMappingURL=buttons.css.map */

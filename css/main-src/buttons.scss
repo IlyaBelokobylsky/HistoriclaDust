@@ -1,0 +1,66 @@
+.hamburger {
+    display: block;
+    position: fixed;
+    background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
+    border: .1rem solid var(--invisible-color);
+    border-radius: 100%;
+    padding: 1.1rem 1.1rem;
+    top: .25rem;
+    right: .25rem;
+    z-index: 999;
+    box-shadow: none;
+    cursor: pointer;
+
+    .hamburger__line_first,
+    .hamburger__line_second,
+    .hamburger__line_third {
+        display: block;
+        position: absolute;
+        width: 1.25rem;
+        top: 1.05rem;
+        right: .5rem;
+        height: .1rem;
+        background: #000;
+    }
+
+    .hamburger__line_first {
+        top: .65rem;
+    }
+
+    .hamburger__line_third {
+        top: 1.45rem;
+    }
+}
+
+.hamburger:focus {
+    outline: none;
+    box-shadow: 0 0 .1rem .01rem var(--invisible-color);
+}
+
+
+.wheel-button-svg {
+    fill: var(--time-color-second);
+}
+.wheel-buttons {
+    display: flex;
+    position: relative;
+    width: 17.5rem;
+    margin: -2.5rem auto;
+    justify-content: space-between;
+    z-index: 9;
+    .wheel-btn {
+        height: 3rem;
+        cursor: pointer;
+        transition: transform .25s ease-in-out;
+
+    }
+    .btn-right {
+        transform: scaleX(-1);
+        &:active {
+            transform: scaleX(-1) translateX(-1rem);
+        }
+    }
+    .btn-left:active {
+        transform: translateX(-1rem);
+    }
+}

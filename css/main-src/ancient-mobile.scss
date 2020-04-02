@@ -1,0 +1,159 @@
+html {
+    --time-color-first: var(--first-color-ancient);
+    --time-color-second: var(--font-color-ancient);
+}
+.subperiods-names {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    li {
+        padding: 2rem 0;
+    }
+}
+
+.subperiod-name {
+    font-size: 1.5rem;
+}
+
+.subperiods {
+    @for $i from 0 through 3 {
+        li[data-position='#{$i}'] {
+            z-index: $i;
+            left: 10.33rem * $i;
+        }
+    }
+}
+
+.bronze-age .subperiod-name {
+    font-size: 1.1rem;
+}
+
+.paleolit::before {
+    background-image: url(../../img/ancient/paleolit.jpg);
+    background-position: -4rem 0;
+}
+.mezolit::before {
+    background-image: url(../../img/ancient/mezolit.jpg);
+    background-position: -18.5rem 0;
+}
+.neolit::before {
+    background-image: url(../../img/ancient/neolit.jpg);
+    background-position: -33rem 0;
+}
+.bronze-age::before {
+    background-image: url(../../img/ancient/bronze-age.jpg);
+    background-position: -32rem 0;
+}
+
+
+.mesopotamia {
+    height: 9rem;
+    width: 16rem;
+    filter: brightness(75%) grayscale(.25) sepia(25%);
+    img {
+        display: block;
+        position: relative;
+        z-index: -1;
+        margin-top: -4rem;
+        margin-left: -7rem;
+        height: 18.4rem;
+    }
+}
+
+.inventions {
+    position: relative;
+}
+
+
+.wheel-prototype {
+    margin-left: 1.5rem;
+    font-size: .8rem;
+    .text {
+        margin-left: 1rem;
+    }
+}
+
+
+@keyframes wheel-animation {
+    from {
+        top: -4rem;
+        right: -4rem;
+        transform: rotate(0);
+    }
+    33% {
+        top: 5rem;
+        right: 5rem;
+        transform: rotate(-600deg);
+    }
+    66% {
+        top: 13.75rem;
+        right: -4rem;
+        transform: rotate(360deg);
+    }
+    // for delay between iterations
+    to {
+        top: -4rem;
+        right: -4rem;
+        transform: rotate(0);
+    }
+}
+.animated-wheel {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    img {
+        width: 3rem;
+        position: relative;
+        animation: wheel-animation 4s 1s ease-in infinite;
+        top: -3rem;
+        right: -3rem;
+        z-index: 9;
+    }
+    .animated-wheel__first-line,
+    .animated-wheel__second-line {
+        display: block;
+        position: absolute;
+        width: 3px;
+        background-color: var(--time-color-first);
+        height: 10rem;
+        transition: 1s ease-out;
+    }
+    .animated-wheel__first-line {
+        transform: rotate(-135deg);
+        top: 0;
+    }
+    .animated-wheel__second-line {
+        transform: rotate(-45deg);
+        top: 7rem;
+    }
+}
+
+
+.writing .main-part {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .information {
+        margin-top: 0;
+    }
+}
+.egypt-alphabet {
+    margin-left: .5rem;
+}
+.cuneiform {
+    margin-right: .5rem;
+    margin-left: 3rem;
+}
+.writing .img-with-text img {
+    height: 11rem;
+    border-radius: 0;
+}
+
+.other-inventions__inventions {
+    font-family: 'Oswald';
+    display: block;
+    position: relative;
+    margin-left: 0;
+    left: 50%;
+    transform: translateX(-35%);
+}

@@ -1,0 +1,695 @@
+@import url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
+html {
+  font-size: 30px;
+  --font-color-light: #f0f0f0;
+  --invisible-color: #cdcdcd;
+  --first-color-ancient: #5A3D30;
+  --font-color-ancient: #45322E;
+  --first-color-antiquity: #dcdcdc;
+  --font-color-antiquity: #909090;
+  --first-color-middle-ages: #99958C;
+  --font-color-middle-ages: #606060;
+  --first-color-new-time: #4D7198;
+  --font-color-new-time: #395778;
+  --first-color-modern: #7442C8;
+  --font-color-modern: #423189;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #232526 0%, #414345 100%);
+  z-index: 999;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.loader .loading-object {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 10rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 690px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 850px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 993px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1160px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1919px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+.hamburger {
+  display: block;
+  position: fixed;
+  background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
+  border: 0.1rem solid var(--invisible-color);
+  border-radius: 100%;
+  padding: 1.1rem 1.1rem;
+  top: .25rem;
+  right: .25rem;
+  z-index: 999;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+.hamburger .hamburger__line_first,
+.hamburger .hamburger__line_second,
+.hamburger .hamburger__line_third {
+  display: block;
+  position: absolute;
+  width: 1.25rem;
+  top: 1.05rem;
+  right: .5rem;
+  height: .1rem;
+  background: #000;
+}
+
+.hamburger .hamburger__line_first {
+  top: .65rem;
+}
+
+.hamburger .hamburger__line_third {
+  top: 1.45rem;
+}
+
+.hamburger:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
+          box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
+}
+
+.wheel-button-svg {
+  fill: var(--time-color-second);
+}
+
+.wheel-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 17.5rem;
+  margin: -2.5rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 9;
+}
+
+.wheel-buttons .wheel-btn {
+  height: 3rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+  transition: -webkit-transform .25s ease-in-out;
+  transition: transform .25s ease-in-out;
+  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+}
+
+.wheel-buttons .btn-right {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.wheel-buttons .btn-right:active {
+  -webkit-transform: scaleX(-1) translateX(-1rem);
+          transform: scaleX(-1) translateX(-1rem);
+}
+
+.wheel-buttons .btn-left:active {
+  -webkit-transform: translateX(-1rem);
+          transform: translateX(-1rem);
+}
+
+.section-title {
+  font-family: 'Russo One';
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.periodization .subperiods-names {
+  font-family: 'Russo One';
+}
+
+.periodization .subperiods-names li {
+  cursor: pointer;
+}
+
+.list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.subperiods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: calc(100vw - 10.33rem);
+  padding: 0;
+  width: 10.33rem;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.subperiods li {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 10.33rem;
+  height: 30rem;
+  border: 0.033rem solid var(--time-color-first);
+  border-radius: 7rem 0 0 7rem;
+  font-family: 'Oswald';
+  color: var(--font-color-light);
+  font-weight: 300;
+}
+
+.subperiods li .subperiod-name {
+  font-family: 'Russo One';
+  text-align: center;
+  color: #fff;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.subperiods li .subperiod-time {
+  font-size: .667rem;
+  text-align: center;
+  margin-top: 0.333rem;
+}
+
+.subperiods li .explanation {
+  font-size: .5rem;
+  font-weight: 100;
+}
+
+.subperiods li .explanation::before {
+  content: '(';
+}
+
+.subperiods li .explanation::after {
+  content: ')';
+}
+
+.subperiods li .subperiod-important {
+  margin-top: 2rem;
+  font-size: .8333rem;
+  text-align: center;
+}
+
+.subperiods li .subperiod-important .happened {
+  font-size: 1rem;
+}
+
+.subperiods li .subperiod-social {
+  font-size: .65rem;
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.subperiods li .subperod-new {
+  margin-top: 3rem;
+  margin-left: 1.1667rem;
+  font-size: .667rem;
+}
+
+.subperiods li .subperod-new sub {
+  font-size: .333rem;
+}
+
+.subperiods li .subperiod-unimportant {
+  display: block;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.1667rem;
+  font-size: .65rem;
+}
+
+.subperiods li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -.5rem;
+  top: -.5rem;
+  width: 11.33rem;
+  height: 31rem;
+  z-index: -1;
+  background-size: cover;
+  -webkit-filter: blur(0.33rem) brightness(50%);
+          filter: blur(0.33rem) brightness(50%);
+  border-radius: 7rem 0 0 7rem;
+}
+
+.subsection-title {
+  margin-top: 3rem;
+  margin-left: 4rem;
+  color: var(--time-color-second);
+  font-family: 'Russo One';
+  font-size: 2rem;
+}
+
+.information-wrapper {
+  font-family: 'Oswald';
+}
+
+.wrapper-wo-title {
+  margin-top: 1rem;
+}
+
+.information, .information-with-picture, .interesting-fact {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.info-right {
+  margin-left: 6rem;
+}
+
+.explanation-picture {
+  display: block;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+}
+
+.scaled-picture {
+  overflow: hidden;
+}
+
+.information-with-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.information-with-picture[data-picture="left"] .text {
+  margin-left: 1.5rem;
+}
+
+.information-with-picture[data-picture="right"] img {
+  margin-left: 1.5rem;
+}
+
+.information-with-picture[data-strings="3"] img {
+  height: 4.401em;
+}
+
+.information-with-picture[data-strings="4"] img {
+  height: 5.868em;
+}
+
+.information-with-picture[data-strings="5"] img {
+  height: 7.335em;
+}
+
+.information-with-picture[data-strings="6"] img {
+  height: 8.802em;
+}
+
+.information-with-picture[data-strings="7"] img {
+  height: 10.269em;
+}
+
+.interesting-fact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.interesting-fact .fact {
+  font-weight: 200;
+  font-size: .67rem;
+  margin-left: 3rem;
+}
+
+.img-with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img-with-text img {
+  border-radius: 2rem;
+}
+
+.img-with-text .text {
+  margin-top: .33rem;
+  font-size: .5rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.over-wheel-sections {
+  font-family: 'Oswald';
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.over-wheel-sections section {
+  position: absolute;
+  top: 0;
+}
+
+.over-wheel-sections section .subsection-title {
+  margin-top: 0;
+}
+
+.canvas-wheel {
+  display: block;
+  margin: 0 auto;
+}
+
+.for-canvas-wheel {
+  display: none;
+}
+
+html {
+  --time-color-first: var(--first-color-ancient);
+  --time-color-second: var(--font-color-ancient);
+}
+
+.subperiods-names {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.subperiods-names li {
+  padding: 2rem 0;
+}
+
+.subperiod-name {
+  font-size: 1.5rem;
+}
+
+.subperiods li[data-position='0'] {
+  z-index: 0;
+  left: 0rem;
+}
+
+.subperiods li[data-position='1'] {
+  z-index: 1;
+  left: 10.33rem;
+}
+
+.subperiods li[data-position='2'] {
+  z-index: 2;
+  left: 20.66rem;
+}
+
+.subperiods li[data-position='3'] {
+  z-index: 3;
+  left: 30.99rem;
+}
+
+.bronze-age .subperiod-name {
+  font-size: 1.1rem;
+}
+
+.paleolit::before {
+  background-image: url(../../img/ancient/paleolit.jpg);
+  background-position: -4rem 0;
+}
+
+.mezolit::before {
+  background-image: url(../../img/ancient/mezolit.jpg);
+  background-position: -18.5rem 0;
+}
+
+.neolit::before {
+  background-image: url(../../img/ancient/neolit.jpg);
+  background-position: -33rem 0;
+}
+
+.bronze-age::before {
+  background-image: url(../../img/ancient/bronze-age.jpg);
+  background-position: -32rem 0;
+}
+
+.mesopotamia {
+  height: 9rem;
+  width: 16rem;
+  -webkit-filter: brightness(75%) grayscale(0.25) sepia(25%);
+          filter: brightness(75%) grayscale(0.25) sepia(25%);
+}
+
+.mesopotamia img {
+  display: block;
+  position: relative;
+  z-index: -1;
+  margin-top: -4rem;
+  margin-left: -7rem;
+  height: 18.4rem;
+}
+
+.inventions {
+  position: relative;
+}
+
+.wheel-prototype {
+  margin-left: 1.5rem;
+  font-size: .8rem;
+}
+
+.wheel-prototype .text {
+  margin-left: 1rem;
+}
+
+@-webkit-keyframes wheel-animation {
+  from {
+    top: -4rem;
+    right: -4rem;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    top: 5rem;
+    right: 5rem;
+    -webkit-transform: rotate(-600deg);
+            transform: rotate(-600deg);
+  }
+  66% {
+    top: 13.75rem;
+    right: -4rem;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    top: -4rem;
+    right: -4rem;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes wheel-animation {
+  from {
+    top: -4rem;
+    right: -4rem;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    top: 5rem;
+    right: 5rem;
+    -webkit-transform: rotate(-600deg);
+            transform: rotate(-600deg);
+  }
+  66% {
+    top: 13.75rem;
+    right: -4rem;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    top: -4rem;
+    right: -4rem;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+.animated-wheel {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+
+.animated-wheel img {
+  width: 3rem;
+  position: relative;
+  -webkit-animation: wheel-animation 4s 1s ease-in infinite;
+          animation: wheel-animation 4s 1s ease-in infinite;
+  top: -3rem;
+  right: -3rem;
+  z-index: 9;
+}
+
+.animated-wheel .animated-wheel__first-line,
+.animated-wheel .animated-wheel__second-line {
+  display: block;
+  position: absolute;
+  width: 3px;
+  background-color: var(--time-color-first);
+  height: 10rem;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.animated-wheel .animated-wheel__first-line {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 0;
+}
+
+.animated-wheel .animated-wheel__second-line {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 7rem;
+}
+
+.writing .main-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.writing .main-part .information {
+  margin-top: 0;
+}
+
+.egypt-alphabet {
+  margin-left: .5rem;
+}
+
+.cuneiform {
+  margin-right: .5rem;
+  margin-left: 3rem;
+}
+
+.writing .img-with-text img {
+  height: 11rem;
+  border-radius: 0;
+}
+
+.other-inventions__inventions {
+  font-family: 'Oswald';
+  display: block;
+  position: relative;
+  margin-left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-35%);
+          transform: translateX(-35%);
+}
+/*# sourceMappingURL=ancient.css.map */

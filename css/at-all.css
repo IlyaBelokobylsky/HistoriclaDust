@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
 html {
   font-size: 30px;
   --font-color-light: #f0f0f0;
+  --invisible-color: #cdcdcd;
   --first-color-ancient: #5A3D30;
   --font-color-ancient: #45322E;
   --first-color-antiquity: #dcdcdc;
@@ -16,6 +19,10 @@ html {
 body, html {
   overflow-x: hidden;
   margin: 0;
+}
+
+html {
+  overflow: hidden;
 }
 
 ul {
@@ -82,6 +89,12 @@ a {
 @media (min-width: 850px) {
   html {
     font-size: 36px;
+  }
+}
+
+@media (min-width: 993px) {
+  html {
+    font-size: 17px;
   }
 }
 

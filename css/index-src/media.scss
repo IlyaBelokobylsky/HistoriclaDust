@@ -1,8 +1,4 @@
-@media (min-width: 993px) { // 1024 х 600
-    html {
-        font-size: 17px;
-    }
-
+@media (min-width: 993px) {
     header {
         h1 {
             margin-left: 5rem;
@@ -47,7 +43,7 @@
                 margin-left: 0;
             }
             li.modern {
-                margin-left: -.65vw;
+                margin-left: -.8vw;
             }
         } 
     }
