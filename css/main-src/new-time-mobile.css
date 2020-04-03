@@ -1,0 +1,43 @@
+html {
+  --time-color-first: var(--first-color-new-time);
+  --time-color-second: var(--font-color-new-time);
+}
+
+.subperiods-names {
+  font-size: 1.5rem;
+}
+
+.subperiods li[data-position='0'] {
+  z-index: 0;
+  left: 0rem;
+}
+
+.subperiods li[data-position='1'] {
+  z-index: 1;
+  left: 10.33rem;
+}
+
+.subperiods li[data-position='2'] {
+  z-index: 2;
+  left: 20.66rem;
+}
+
+.early::before {
+  background-image: url(../../img/new-time/early.jpg);
+  background-position: -17.67rem 0;
+}
+
+.developed::before {
+  background-image: url(../../img/new-time/elightenment.jpg);
+  background-position: -7.63rem 0;
+}
+
+.late::before {
+  background-image: url(../../img/new-time/xix-century.jpg);
+  background-position: -19.2rem 0;
+}
+
+.british-empire-img {
+  width: 20rem;
+}
+/*# sourceMappingURL=new-time-mobile.css.map */

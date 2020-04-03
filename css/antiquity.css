@@ -484,220 +484,107 @@ a {
 }
 
 html {
-  --time-color-first: var(--first-color-ancient);
-  --time-color-second: var(--font-color-ancient);
+  --time-color-first: var(--first-color-antiquity);
+  --time-color-second: var(--font-color-antiquity);
 }
 
-.subperiods-names {
-  font-size: 1.5rem;
+.periodization .subperiod-name {
+  font-size: 1rem;
 }
 
-.subperiod-name {
-  font-size: 1.5rem;
+.periodization .subperiods {
+  margin-top: 6.5rem;
 }
 
-.subperiods li[data-position='0'] {
+.periodization .greece {
+  font-size: 1rem;
+}
+
+.periodization .greece .subperiods li[data-position='0'] {
   z-index: 0;
   left: 0rem;
 }
 
-.subperiods li[data-position='1'] {
+.periodization .greece .subperiods li[data-position='1'] {
   z-index: 1;
   left: 10.33rem;
 }
 
-.subperiods li[data-position='2'] {
+.periodization .greece .subperiods li[data-position='2'] {
   z-index: 2;
   left: 20.66rem;
 }
 
-.subperiods li[data-position='3'] {
+.periodization .greece .subperiods li[data-position='3'] {
   z-index: 3;
   left: 30.99rem;
 }
 
-.bronze-age .subperiod-name {
-  font-size: 1.1rem;
+.periodization .greece .subperiods li[data-position='4'] {
+  z-index: 4;
+  left: 41.32rem;
 }
 
-.paleolit::before {
-  background-image: url(../../img/ancient/paleolit.jpg);
+.periodization .rome {
+  font-size: 1.5rem;
+}
+
+.periodization .rome .subperiods li[data-position='0'] {
+  z-index: 0;
+  left: 0rem;
+}
+
+.periodization .rome .subperiods li[data-position='1'] {
+  z-index: 1;
+  left: 10.33rem;
+}
+
+.periodization .rome .subperiods li[data-position='2'] {
+  z-index: 2;
+  left: 20.66rem;
+}
+
+.periodization .krito-micken::before {
+  background-image: url(../../img/antiquity/krito-micken.jpg);
+  background-position: -18.77rem 0;
+}
+
+.periodization .dark-ages::before {
+  background-image: url(../../img/antiquity/dark-ages.webp);
   background-position: -4rem 0;
 }
 
-.mezolit::before {
-  background-image: url(../../img/ancient/mezolit.jpg);
-  background-position: -18.5rem 0;
+.periodization .archaic-greece::before {
+  background-image: url(../../img/antiquity/archaic-greece.jpg);
+  background-position: -12.7rem 0;
 }
 
-.neolit::before {
-  background-image: url(../../img/ancient/neolit.jpg);
-  background-position: -33rem 0;
+.periodization .classic-greece::before {
+  background-image: url(../../img/antiquity/classic-greece.jpg);
+  background-position: -29.97rem 0;
 }
 
-.bronze-age::before {
-  background-image: url(../../img/ancient/bronze-age.jpg);
-  background-position: -32rem 0;
+.periodization .ellinism::before {
+  background-image: url(../../img/antiquity/ellinism.jpg);
+  background-position: -16.4rem 0;
 }
 
-.mesopotamia {
-  height: 9rem;
-  width: 16rem;
-  -webkit-filter: brightness(75%) grayscale(0.25) sepia(25%);
-          filter: brightness(75%) grayscale(0.25) sepia(25%);
+.periodization .tsars-time::before {
+  background-image: url(../../img/antiquity/tsars-time.jpg);
+  background-position: -21.9rem 0;
 }
 
-.mesopotamia img {
-  display: block;
-  position: relative;
-  z-index: -1;
-  margin-top: -4rem;
-  margin-left: -7rem;
-  height: 18.4rem;
+.periodization .republic::before {
+  background-image: url(../../img/antiquity/roman-republic.jpg);
+  background-position: -20.1rem 0;
 }
 
-.inventions {
-  position: relative;
+.periodization .empire:before {
+  background-image: url(../../img/antiquity/roman-empire.jpg);
+  background-position: -21rem 0;
 }
 
-.wheel-prototype {
-  margin-left: 1.5rem;
-  font-size: .8rem;
+.roman-video img {
+  height: 15rem;
 }
-
-.wheel-prototype .text {
-  margin-left: 1rem;
-}
-
-@-webkit-keyframes wheel-animation {
-  from {
-    top: -4rem;
-    right: -4rem;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  33% {
-    top: 5rem;
-    right: 5rem;
-    -webkit-transform: rotate(-600deg);
-            transform: rotate(-600deg);
-  }
-  66% {
-    top: 13.75rem;
-    right: -4rem;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    top: -4rem;
-    right: -4rem;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes wheel-animation {
-  from {
-    top: -4rem;
-    right: -4rem;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  33% {
-    top: 5rem;
-    right: 5rem;
-    -webkit-transform: rotate(-600deg);
-            transform: rotate(-600deg);
-  }
-  66% {
-    top: 13.75rem;
-    right: -4rem;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    top: -4rem;
-    right: -4rem;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-.animated-wheel {
-  position: absolute;
-  top: 5rem;
-  right: 0;
-}
-
-.animated-wheel img {
-  width: 3rem;
-  position: relative;
-  -webkit-animation: wheel-animation 4s 1s ease-in infinite;
-          animation: wheel-animation 4s 1s ease-in infinite;
-  top: -3rem;
-  right: -3rem;
-  z-index: 9;
-}
-
-.animated-wheel .animated-wheel__first-line,
-.animated-wheel .animated-wheel__second-line {
-  display: block;
-  position: absolute;
-  width: 3px;
-  background-color: var(--time-color-first);
-  height: 10rem;
-  -webkit-transition: 1s ease-out;
-  transition: 1s ease-out;
-}
-
-.animated-wheel .animated-wheel__first-line {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  top: 0;
-}
-
-.animated-wheel .animated-wheel__second-line {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 7rem;
-}
-
-.writing .main-part {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.writing .main-part .information {
-  margin-top: 0;
-}
-
-.egypt-alphabet {
-  margin-left: .5rem;
-}
-
-.cuneiform {
-  margin-right: .5rem;
-  margin-left: 3rem;
-}
-
-.writing .img-with-text img {
-  height: 11rem;
-  border-radius: 0;
-}
-
-.other-inventions__inventions {
-  font-family: 'Oswald';
-  display: block;
-  position: relative;
-  margin-left: 0;
-  left: 50%;
-  -webkit-transform: translateX(-35%);
-          transform: translateX(-35%);
-}
-/*# sourceMappingURL=ancient.css.map */
+/*# sourceMappingURL=antiquity.css.map */

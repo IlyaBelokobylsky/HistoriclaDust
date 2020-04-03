@@ -19,7 +19,7 @@ function makeWheel(){
 
         // make the circle
         const backImage = infoFromArr[i].querySelector('.background-image'),
-            pattern = ctx.createPattern(backImage, 'no-repeat');
+            pattern = ctx.createPattern(backImage, 'repeat');
             
         ctx.save();
         // make the cirlce
@@ -78,6 +78,10 @@ function makeWheel(){
     }
 };
 window.addEventListener('load', makeWheel);
+
+// make margin-top for wheel and buttons,
+// because information elems have position
+// absolute
 const informationArr = Array.from(document.querySelector('.over-wheel-sections').children);
 let marginTop = 0;
 informationArr.forEach((item, index) => {
@@ -90,4 +94,3 @@ informationArr.forEach((item, index) => {
     marginTop = heightBefore;
 });
 document.querySelector('.wheel-buttons').style.marginTop = `${marginTop + fontSize * 3}px`;
-console.log(wheelElem.style.marginTop)

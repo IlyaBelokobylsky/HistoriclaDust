@@ -1,15 +1,23 @@
-.section-title {
+.section-title, .periodization-title {
     font-family: 'Russo One';
     font-size: 2.4rem;
-    margin-top: 2rem;
+    margin-top: 4.67rem;
     margin-left: 1rem;
 }
-
+.periodization-title {
+    margin-top: 2rem;
+}
 .periodization {
     .subperiods-names {
         font-family: 'Russo One';
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 2rem;
         li {
             cursor: pointer;
+            padding: 1rem 0;
         }
     }
 }
@@ -42,6 +50,7 @@
             text-align: center;
             color: #fff;
             margin-top: 4rem;
+            margin-left: 0.5rem;
             margin-bottom: 0;
             font-weight: 300;
         }
@@ -131,6 +140,9 @@
 }
 .info-right {
     margin-left: 6rem;
+}
+.wide-information {
+    margin-left: 2rem;
 }
 .explanation-picture {
     display: block;

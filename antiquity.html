@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/antiquity.css">
+    <title>Античность</title>
+</head>
+<body>
+    <div class="loader">
+        <canvas class="loading-object" width="500" height="500">
+            Пожалуйста, подождите
+        </canvas>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <svg width="0" height="0" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="wheel-button-svg" class="wheel-button-svg">
+            <path d="M18.2264 0.600636C17.7192 0.387455 17.1295 0.50726 16.7381 0.896624L0.400156 13.7809C-0.133385 14.3129 -0.133385 15.1851 0.400156 15.7189L16.7381 28.5415C16.9979 28.8057 17.3489 28.9449 17.7016 28.9449C17.8807 28.9449 18.0579 28.9079 18.2264 28.841C18.7371 28.6278 19.0425 28.1292 19.0425 27.5742V19.8944C36.5142 19.8944 44.1558 24.8416 42.9922 40.5977C50.3933 15.3894 36.1878 9.69167 19.0425 9.69167V1.86563C19.0408 1.31065 18.7371 0.812056 18.2264 0.600636Z"/>
+        </symbol>
+    </svg>
+        
+    <button class="hamburger">
+        <span class="hamburger__line_first"></span>
+        <span class="hamburger__line_second"></span>
+        <span class="hamburger__line_third"></span>
+    </button>
+
+
+    <section class="periodization">
+        <h2 class="periodization-title">
+            Периодизация 
+            <br>
+            античности
+        </h2>
+
+        <div class="list-wrapper greece">
+            <div class="left-section">
+                <h3 class="subsection-title">Греция</h3>
+                <ol class="subperiods-names">
+                    <li class="krito-micken">Крито-микенская <br> эпоха</li>
+                    <li class="dark-ages">"Темные века"</li>
+                    <li class="archaic-greece">Архаическая <br> Греция</li>
+                    <li class="classic-greece">Классическая <br> Греция</li>
+                    <li class="ellinism">Эллинизм</li>
+                </ol>
+            </div>
+
+
+            <ul class="subperiods">
+                <li class="krito-micken" data-position="0">
+                    <h4 class="subperiod-name">Крито-микенская <br> эпоха</h4>
+                    <p class="subperiod-time">III-II тыс. — XII век до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Возникновение</span>
+                        <br>
+                        минойской и элладской 
+                        <br>
+                        цивилизаций 
+                    </p>
+
+                    <p class="subperiod-social">Доминирование дворцового хозяйства</p>
+                
+                    <p class="subperod-new">
+                        Использование боевых колесниц. <br>
+                        Расслоение общества на рабов <br>
+                        и рабовладельцев
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подразделяется на 2 <br> 
+                        цивилизации:  минойскую <br>
+                        и микенскую.
+                    </p>
+                </li>
+
+                <li class="dark-ages" data-position="1">
+                    <h4 class="subperiod-name">"Темные века"</h4>
+                    <p class="subperiod-time">XI — IX века до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Упадок</span>
+                        <br>
+                        культуры и цивилизации
+                    </p>
+
+                    <p class="subperiod-social">Формирование полисных структур</p>
+                
+                    <p class="subperod-new">
+                        Греция - мир мелких полисов- <br>
+                        общин, где господствуют <br>
+                        родоплеменные отношения.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Мало что известно про <br>
+                        данный  период из-за <br>
+                        утраты письменности.
+                    </p>
+                </li>
+
+                <li class="archaic-greece" data-position="2">
+                    <h4 class="subperiod-name">Архаическая <br> Греция</h4>
+                    <p class="subperiod-time">VIII — VI века до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Возрождение</span>
+                        <br>
+                        письменности
+                    </p>
+
+                    <p class="subperiod-social">Рост населения и благосостояния</p>
+                
+                    <p class="subperod-new">
+                        Скачок к товарно-денежным <br>
+                        отношениям. Рассвет письменного <br>
+                        искусства и философии. 
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подразделяется на 3 <br> 
+                        периода: ранний, <br>
+                        средний, поздний.
+                    </p>
+                </li>
+
+                <li class="classic-greece" data-position="3">
+                    <h4 class="subperiod-name">Классическая Греция</h4>
+                    <p class="subperiod-time">V в. — 338 год до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Формирование</span>
+                        <br>
+                        идей гуманизма
+                    </p>
+
+                    <p class="subperiod-social">Рост популярности демократии</p>
+                
+                    <p class="subperod-new">
+                        Демократизация в политике. <br>
+                        Значительные достижения в <br>
+                        области науки и искусства.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Македонских завоевания.
+                        Период заканчивается 
+                        смертью А. Македонского
+                    </p>
+                </li>
+
+                <li class="ellinism" data-position="4">
+                    <h4 class="subperiod-name">Эллинизм</h4>
+                    <p class="subperiod-time">IV — II века до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Распространение</span>
+                        <br>
+                        греческой культуры
+                    </p>
+
+                    <p class="subperiod-social">Переход от полисов к монархиям</p>
+                
+                    <p class="subperod-new">
+                        Эллинизация востока. <br>
+                        Возникновение рабства в <br>
+                        классическом виде.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подразделяется на 3 <br> 
+                        периода: ранний, <br>
+                        "классический", поздний.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="list-wrapper rome">
+            <div class="left-section">
+                <h3 class="subsection-title">Рим</h3>
+                <ol class="subperiods-names">
+                    <li class="tsars-time">Эпоха царей</li>
+                    <li class="republic">Республика</li>
+                    <li class="empire">Империя</li>
+                </ol>
+            </div>
+
+
+            <ul class="subperiods">
+                <li class="tsars-time" data-position="0">
+                    <h4 class="subperiod-name">Эпоха царей</h4>
+                    <p class="subperiod-time">754 — 510 года до н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Основание</span>
+                        <br>
+                        Рима, римского права
+                    </p>
+
+                    <p class="subperiod-social">Сохранение родовых отношений</p>
+                
+                    <p class="subperod-new">
+                        Деление общества в зависимости <br>
+                        от их рода. Преобладание <br>
+                        реализма в искусстве.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Большинство источников <br>
+                        имеет легендарный <br>
+                        характер.
+                    </p>
+                </li>
+
+                <li class="republic" data-position="1">
+                    <h4 class="subperiod-name">Римская <br> республика</h4>
+                    <p class="subperiod-time">509 — 27 года до н. э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Возникновение</span>
+                        <br>
+                        сената и плебисцита
+                    </p>
+
+                    <p class="subperiod-social">Сочетание аристократии и демократии</p>
+                
+                    <p class="subperod-new">
+                        Завоевания Рима, значительное <br>
+                        увеличение территории. Деление <br>`
+                        общества на свободных и рабов
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подразделяется на 2 <br>
+                        периода: ранний и <br>
+                        поздний.
+                    </p>
+                </li>
+
+                <li class="empire" data-position="2">
+                    <h4 class="subperiod-name">Римская <br> Империя</h4>
+                    <p class="subperiod-time">27 год до н.э. — 476 год н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Объединение</span>
+                        <br>
+                        античного мира
+                    </p>
+
+                    <p class="subperiod-social">Автократическая форма правления</p>
+                
+                    <p class="subperod-new">
+                        Присоединение всего побережья <br>
+                        Средиземного моря. Значительное <br>
+                        наследие после падения.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подразделяется на 2 <br>
+                        периода:  принципат и <br>
+                        доминат.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="rome-birth">
+        <h2 class="section-title">Возникновение Рима</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    Древний Рим являлся одной из наиболее <br>
+                    могущественных древних цивилизаций. <br>
+                    Он оказал огромное влияние на формирование <br> 
+                    средневековых государств, дав им культурный <br>
+                    фундамент.
+                </p>
+                <div class="img-with-text roman-video">
+                    <img src="img/antiquity/Roman.gif" alt="Извините, gif-файл в данный момент не доступен">
+                    <span class="text">Границы Дрвенего Рима с течением времени</span>
+                </div>
+                <p class="information-with-picture" data-picture="left" data-strings="3">
+                    <img src="img/antiquity/column.svg" alt="">
+                    <span class="text">
+                        Рим дал современности <br>
+                        правовую систему, христианство, <br>
+                        искусство, латынь и многое другое.
+                    </span>
+                </p>
+            </div>
+
+            <div class="right-part">
+                <p class="interesting-fact">
+                    <span class="interesting">Интересный факт:</span>
+                    <span class="fact">
+                        По легенде, один из основателей Рима - <br>
+                        Ромул, убил своего брата Рема в споре <br>
+                        за место основания города. Раскаявшись, <br>
+                        Ромул основал данный город и стал его <br>
+                        царём.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="science">
+        <h2 class="section-title">Научные достижения</h2>
+
+        <div class="over-wheel-sections">
+            <section class="section__early hidden">
+                <div class="subsection-title">Ранний этап</div>
+                <p class="information">
+                    В первом периоде наука была тесно связана <br>
+                    с философией. В первую очередь рассматривалась <br>
+                    проблема происхождения и устройства мира.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/antiquity/nature-science.svg" alt="">
+                    <span class="text">
+                        Высшей точкой развития <br> 
+                        науки «о природе» <br>
+                        была научно-философская bronze
+                        система Аристотеля.
+                    </span>
+                </p>
+            </section>
+            <section class="section__ellin hidden">
+                <div class="subsection-title">Эллинский этап</div>
+                <p class="information">
+                    В данный период произошло деление науки, <br>
+                    начиная с обособления математики.  Расцвет <br>
+                    эллинистической науки был одной из форм <br>
+                    расцвета эллинистической культуры в целом .
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/antiquity/science.svg" alt="">
+                    <span class="text">
+                        Приобрели самостоятельнсоть <br>
+                        такие дисциплины: математика, <br>
+                        механика, астрономия, география, <br> 
+                        медицина, ботаника, история.
+                    </span>
+                </p>
+            </section>
+            <section class="section__roman visible">
+                <div class="subsection-title">Римский этап</div>
+                <p class="information">
+                    Время упадка науки. Но на данном этапе <br>
+                    сильно прослеживается развитие искусства <br>
+                    и философии. 
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/antiquity/law.svg" alt="">
+                    <span class="text">
+                        Немалую роль сыграло и <br> 
+                        римское право, которым <br>
+                        мы пользуемся до сих пор <br>
+                        в немного преобразованном виде. <br>
+                    </span>
+                </p>
+            </section>
+        </div>
+
+        <div class="wheel">
+            <div class="wheel-buttons">
+                <span class="wheel-btn btn-left" data-direction="-1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+                <span class="wheel-btn btn-right" data-direction="1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+            </div>
+            <canvas class="canvas-wheel" width="1000" height="1000" data-current="fetishism">
+                К сожалению, ваш браузер яляется устаревшим 
+                и не поддерживает необходимые для данного сайта технологии, 
+                пожалуйста, скачайте новую версию Chrome по 
+                <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a>.
+            </canvas>
+            <div class="for-canvas-wheel">
+                <div class="early">
+                    <img src="img/antiquity/early-science.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Ранний</h3>
+                    <p class="canvas-text">Наука, как часть философии</p>
+                </div>
+                <div class="ellin">
+                    <img src="img/antiquity/ellin-science.webp" alt="" class="background-image">
+                    <h3 class="canvas-title">Эллинский</h3>
+                    <p class="canvas-text">Выделение отдельных наук от одной общей</p>
+                </div>
+                <div class="roman">
+                    <img src="img/antiquity/roman-science.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Римский</h3>
+                    <p class="canvas-text">Упадок наук, развитие искусства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <secion class="humanism">
+        <div class="information-wrapper">
+            <div class="left-part">
+                <h2 class="section-title">Гуманизм античности</h2>
+                <p class="information">
+                    Гуманизм в античном искусстве подразумевал, <br>
+                    чтовенцом творения природы является не Бог, <br>
+                    а человек.  Сам же гуманизм - система построения <br>
+                    человеческого общества, где высшей ценностью <br>
+                    является человек и его жизнь.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/antiquity/stained-glass-window.svg" alt="">
+                    <span class="text">
+                        Гуманизм так же нашел себе <br>
+                        место в эпоху Ренессанса, однако <br> 
+                        он обладал свойственными <br>
+                        своему периоду отличиями.
+                    </span>
+                </p>
+            </div>
+            <div class="right-part">
+
+            </div>
+        </div>
+    </secion>
+
+
+    <section class="religions">
+        <h2 class="section-title">Религии</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <h3 class="subsection-title">Древнегреческая</h3>
+                <p class="information">
+                    Она не имела единой организации и учения, <br>
+                    а состояла из общинных культов различных <br> 
+                    божеств, которые не были всемогущими, <br>
+                    но покровительствовали стихиям, сферам  <br>
+                    человеческой деятельности.
+                </p>
+                <p class="information-with-picture" data-strings="4" data-picture="left">
+                    <img src="img/antiquity/zeus.svg" alt="">
+                    <span class="text">
+                        В греческой культуре была <br>
+                        очень тщательно разработана <br> 
+                        мифология. Но ее сотворением <br>
+                        занимались, в основном, поэты
+                    </span>
+                </p>
+            </div>
+            
+            <div class="right-part">
+                <h3 class="subsection-title">Древнеримская</h3>
+                <p class="information">
+                    Из-за сильного влияния греческой религии <br>
+                    в III веке до н.э., римляне начали отождествлять <br>
+                    своих богов с греческими. Среди латинской прозы <br>
+                    одной из самых ранних письменных форм было <br>
+                    именно священное писание.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="6">
+                    <img src="img/antiquity/pantheon.svg" alt="">
+                    <span class="text">
+                        Несмотря на сходство данных <br> 
+                        религий, у них все же есть <br>
+                        различия. Например, в <br>
+                        древнеримской мифологии <br>
+                        иерархия богов напоминала <br>
+                        социальный строй Рима.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="js/canvas-wheel.js"></script>
+</body>
+</html>

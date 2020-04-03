@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/new-time.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Новое время</title>
+</head>
+<body>
+    <div class="loader">
+        <canvas class="loading-object" width="500" height="500">
+            Пожалуйста, подождите
+        </canvas>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <svg width="0" height="0" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="wheel-button-svg" class="wheel-button-svg">
+            <path d="M18.2264 0.600636C17.7192 0.387455 17.1295 0.50726 16.7381 0.896624L0.400156 13.7809C-0.133385 14.3129 -0.133385 15.1851 0.400156 15.7189L16.7381 28.5415C16.9979 28.8057 17.3489 28.9449 17.7016 28.9449C17.8807 28.9449 18.0579 28.9079 18.2264 28.841C18.7371 28.6278 19.0425 28.1292 19.0425 27.5742V19.8944C36.5142 19.8944 44.1558 24.8416 42.9922 40.5977C50.3933 15.3894 36.1878 9.69167 19.0425 9.69167V1.86563C19.0408 1.31065 18.7371 0.812056 18.2264 0.600636Z"/>
+        </symbol>
+    </svg>
+        
+    <button class="hamburger">
+        <span class="hamburger__line_first"></span>
+        <span class="hamburger__line_second"></span>
+        <span class="hamburger__line_third"></span>
+    </button>
+
+
+    <section class="periodization">
+        <h2 class="periodization-title">
+            Периодизация 
+            <br>
+            нового времени
+        </h2>
+    
+        <div class="list-wrapper">
+            <ol class="subperiods-names">
+                <li class="early">Раннее</li>
+                <li class="elightnment">Просвещение</li>
+                <li class="long-xix-century">"Долгий <br> XIX век</li>
+            </ol>
+
+
+            <ul class="subperiods">
+                <li class="early" data-position="0">
+                    <h4 class="subperiod-name">Раннее <br> новое время</h4>
+                    <p class="subperiod-time">конец XV —  начало XVIII веков н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Возникновение </span>
+                        <br>
+                        протестантизма
+                    </p>
+
+                    <p class="subperiod-social">Начало политики колонизации</p>
+                
+                    <p class="subperod-new">
+                        Великие географические открытия. <br>
+                        Реформы в религии. Начало  <br>
+                        недовольства монархиями. <br>
+                        Начало колониализма.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Москва - третий Рим. <br>
+                        Торговля Европы с <br>
+                        Востоком
+                    </p>
+                </li>
+
+                <li class="elightnment" data-position="1">
+                    <h4 class="subperiod-name">Эпоха <br> Просвещения</h4>
+                    <p class="subperiod-time">начало XVIII — конец XVIII века н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Рост</span>
+                        <br>
+                        промышленности
+                    </p>
+
+                    <p class="subperiod-social">Кризис монархии и автократии</p>
+                
+                    <p class="subperod-new">
+                        Доступность знаний всем слоям <br>
+                        общества. Война за независимость <br>
+                        США. Подъем науки, музыки, <br>
+                        литературы.  
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Популяризация науки <br>
+                        и знаний в целом.
+                    </p>
+                </li>
+
+                <li class="long-xix-century" data-position="2">
+                    <h4 class="subperiod-name">"Долгий <br> XIX век"</h4>
+                    <p class="subperiod-time">конец XVIII — начало XX века н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Завершение</span>
+                        <br>
+                        промышленной революции
+                    </p>
+
+                    <p class="subperiod-social">Индустриализация общества</p>
+                
+                    <p class="subperod-new">
+                        Время революций. Наполеоновские <br>
+                        войны. Доминирование империй. <br>
+                        Рисорджименто и объединение <br>
+                        Германии.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Возникновение <br>
+                        политических блоков.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="revolutions-and-reformations">
+        <h2 class="section-title">Революции и реформации</h2>
+        <div class="information-wrapper">
+            <div class="reformations">
+                <h3 class="subsection-title">Реформации</h3>
+                <p class="information">
+                    Реформации в церкви были направлены на <br>
+                    уменьшение влияния папы на жизнь общества. <br>
+                    Зародилась она в Германии, под началом <br>
+                    Мартина Лютера.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/new-time/faith.svg" alt="">
+                    <span class="text">
+                        Как следствие данных событий, <br>
+                        начали формироваться другие <br>
+                        направления христианства, <br>
+                        отделенные от католицизма: <br>
+                        лютеранство, кальвинизм и т.д.
+                    </span>
+                </p>
+            </div>
+            <div class="revolutions">
+                <h3 class="subsection-title">Революции</h3>
+                <p class="information">
+                    Из-за недовольства монархиями, люди решают <br>
+                    восстать против своих правителей. В Англии <br> 
+                    (1642 - 1641 гг.) и Франции (1789 - 1799 гг.) <br>
+                    следствием революции было установление <br>
+                    республики. Однако Франция республикой <br>
+                    оставалась лишь де-юре и Наполеон Бонапарт <br>
+                    правозгласил себя императором (09.11.1799).
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/new-time/revolution.svg" alt="">
+                    <span class="text">
+                        В Нидерландах (1566 - 1609 гг.) <br>
+                        и в США (1775 - 1773 гг.)  <br>
+                        причинами свержения правителей <br>
+                        были  чрезмерно высокие налоги  <br>
+                        и желание независимости.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="coloinalism">
+        <h2 class="section-title">Колониализм</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    Начался с Великих географических открытий, <br>
+                    которым положил начало Христофор Колумб,  <br>
+                    открыв Новый Свет в 1492 году.
+                </p>
+                <p class="img-with-text">
+                    <img class="british-empire-img" src="img/new-time/british-empire.png" alt="Извините, изображение недоступно">
+                    <span class="text">Территории, бывшие частью Британской империи</span>
+                </p>
+                <p class="information">
+                    Империи боролись между собой в колониальной <br> 
+                    гонке с целью обогатиться за счет приобретенных <br>
+                    земель и повышения своего мирового статуса.
+                </p>
+                <p class="interesting-fact">
+                    <span class="interesting">Интересный факт:</span>
+                    <span class="fact">
+                        Христфор Колумб не знал, что открыл <br>
+                        новый континент. По его мнению, он <br>
+                        нашел восточный путь в Индию, однако <br>
+                        Америго Веспуччи доказал, что это <br>
+                        на самом деле Новый Свет, который <br>
+                        позже был назван его именем.
+                    </span>
+                </p>
+            </div>
+            <div class="right-part"></div>
+        </div>
+        <div class="about-empires information-wrapper">
+            <p class="information-with-picture" data-picture="left" data-strings="4">
+                <img src="img/new-time/british.svg" alt="">
+                <span class="text">
+                    Пальму первенства заняла <br>
+                    Британская империя, забрав <br>
+                    себе территории Австралии, <br>
+                    Канады, США, Индии и др. <br>
+                </span>
+            </p>
+            <p class="information-with-picture" data-picture="right" data-strings="4">
+                <span class="text">
+                    Следом за ней шла <br>
+                    Испанская империя, <br>
+                    получив территории <br>
+                    Латинской Америки.
+                </span>
+                <img src="img/new-time/spanish.png" alt="">
+            </p>
+        </div>
+        <div class="seven-years-war">
+            <h3 class="subsection-title">Семилетняя война</h3>
+            <div class="information-wrapper">
+                <div class="left-part">
+                    <p class="information">
+                        Длившаяся с 1756 по 1763 года происходила <br>
+                        как и на территории Европы, так и в Новом Свете. <br>
+                        Стала первой окопной и артиллерийской войной. <br>
+                        Участвовали в ней все великие державы Европы.
+                    </p>
+                    <p class="information-with-picture" data-picture="left" data-strings="5">
+                        <img src="img/new-time/flag.svg" alt="">
+                        <span class="text">
+                            В итоге Великобритания вырвалась <br> 
+                            вперед в колониальной гонке, из-за <br>
+                            территориальных приобретений. А <br>
+                            Пруссия сумела возвыситься еще <br>
+                            сильнее.
+                        </span>
+                    </p>
+                </div>
+                <div class="right-part">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="science">
+        <h2 class="section-title">Научные достижения</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    Промышленная революция дала толчок к <br>
+                    новым исследованиям в промышленности и <br>
+                    инженерии. 
+                </p>
+                <p class="information-with-picture" data-picture="right" data-strings="5">
+                    <span class="text">
+                        Среди изобретений наиболее <br>
+                        важными являются паровой <br>
+                        двигатель, фотография, <br>
+                        лампочка, радиоприемник,  <br>
+                        телефон, рентген.
+                    </span>
+                    <img src="img/new-time/lamp.svg" alt="">
+                </p>
+            </div>
+            <div class="right-part">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="religions">
+        <h2 class="section-title">Релгии</h2>
+        <div class="over-wheel-sections">
+            <section class="section__animism hidden">
+                <div class="subsection-title">Христианство</div>
+                <p class="information">
+                    Вера в единого Бога в трех обличиях: <br>
+                    Бог - сын, Бог - отец, Бог - святой дух. <br>
+                    Возкло около 33 года нашей эры. 
+                </p>
+                <p class="information info-right">
+                    Основано на вере в Спасителя - Иисуса Христа. <br>
+                    Главным литературным источником является <br>
+                    Библия. Согласно данной религии, человек создан <br>
+                    по образу и подобию Божьему и после смерти <br>
+                    его ждет загробная жизнь, в зависимости от <br>
+                    совершенных человеком деяний. Судный день <br>
+                    наступает во втором пришествии Иисуса Христа.
+                </p>
+            </section>
+            <section class="section__totemism hidden">
+                <div class="subsection-title">Ислам</div>
+                <p class="information">
+                    Вера в единого Бога - Аллаха и его пророков, <br>
+                    в частности, жившего в Мекке Мухаммеда, <br>
+                    который создал священную книгу - Коран. <br>
+                    Данная книга является действительной только <br>
+                    в оригинале.
+                </p>
+                <p class="information info-right">
+                    Возникло в VII веке нашей эры в Аравии. <br>
+                    Спасение достигается соблюдением <br>
+                    пяти основных принципов. Судный день <br>
+                    наступает с пришествием пророка после <br>
+                    Мухаммеда.
+                </p>
+            </section>
+            <section class="section__fetishism visible">
+                <div class="subsection-title">Буддизм</div>
+                <p class="information">
+                    Религиозно-философское учение, возникшее <br>
+                    в V веке до нашей эры. Основано на учении <br>
+                    Будд и его пути в Нирвану, ставшего отшельником- <br>
+                    аскетом.
+                </p>
+                <p class="information info-right">
+                    Будда на своем пути осваивал метод контроля <br>
+                    собственного сознания через медитации и <br>
+                    размышления. Так он пришел к выводу, на <br>
+                    котором основывается буддизм: люди слишком <br>
+                    сильно привязаны к мирским благам, из-за чего <br>
+                    человеческая душа деградирует, а не развивается. 
+                </p>
+            </section>
+        </div>
+
+        <div class="wheel">
+            <div class="wheel-buttons">
+                <span class="wheel-btn btn-left" data-direction="-1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+                <span class="wheel-btn btn-right" data-direction="1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+            </div>
+            <canvas class="canvas-wheel" width="1000" height="1000" data-current="fetishism">
+                К сожалению, ваш браузер яляется устаревшим 
+                и не поддерживает необходимые для данного сайта технологии, 
+                пожалуйста, скачайте новую версию Chrome по 
+                <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a>.
+            </canvas>
+            <div class="for-canvas-wheel">
+                <div class="animism">
+                    <img src="img/christian.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Христиансво</h3>
+                    <p class="canvas-text">Вера в Иисуса Христа</p>
+                </div>
+                <div class="totemism">
+                    <img src="img/islam.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Ислам</h3>
+                    <p class="canvas-text">Вера в единого Бога</p>
+                </div>
+                <div class="fetishism">
+                    <img src="img/buddism.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Буддизм</h3>
+                    <p class="canvas-text">Философское мировоззрение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/canvas-wheel.js"></script>
+</body>
+</html>

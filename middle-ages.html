@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/middle-ages.css">
+    <title>Средние века</title>
+</head>
+<body>
+    <div class="loader">
+        <canvas class="loading-object" width="500" height="500">
+            Пожалуйста, подождите
+        </canvas>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <svg width="0" height="0" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="wheel-button-svg" class="wheel-button-svg">
+            <path d="M18.2264 0.600636C17.7192 0.387455 17.1295 0.50726 16.7381 0.896624L0.400156 13.7809C-0.133385 14.3129 -0.133385 15.1851 0.400156 15.7189L16.7381 28.5415C16.9979 28.8057 17.3489 28.9449 17.7016 28.9449C17.8807 28.9449 18.0579 28.9079 18.2264 28.841C18.7371 28.6278 19.0425 28.1292 19.0425 27.5742V19.8944C36.5142 19.8944 44.1558 24.8416 42.9922 40.5977C50.3933 15.3894 36.1878 9.69167 19.0425 9.69167V1.86563C19.0408 1.31065 18.7371 0.812056 18.2264 0.600636Z"/>
+        </symbol>
+    </svg>
+        
+    <button class="hamburger">
+        <span class="hamburger__line_first"></span>
+        <span class="hamburger__line_second"></span>
+        <span class="hamburger__line_third"></span>
+    </button>
+
+
+    <section class="periodization">
+        <h2 class="periodization-title">
+            Периодизация 
+            <br>
+            средневековья
+        </h2>
+    
+        <div class="list-wrapper">
+            <ol class="subperiods-names">
+                <li class="early">Раннее</li>
+                <li class="developed">Развитое</li>
+                <li class="late">Позднее</li>
+            </ol>
+
+
+            <ul class="subperiods">
+                <li class="early" data-position="0">
+                    <h4 class="subperiod-name">Раннее <br> средневековье</h4>
+                    <p class="subperiod-time">конец V — середина XI веков н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Образование </span>
+                        <br>
+                        новых королевств
+                    </p>
+
+                    <p class="subperiod-social">Становление феодальных отношений</p>
+                
+                    <p class="subperod-new">
+                        Великое переселение народов. <br>
+                        Распространение ислама и <br>
+                        христианства. Основание <br>
+                        Священной Римской империи
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Новый преемник рима - <br>
+                        Византийская империя. <br>
+                        Эпоха викингов.
+                    </p>
+                </li>
+
+                <li class="developed" data-position="1">
+                    <h4 class="subperiod-name">Развитое <br> средневековье</h4>
+                    <p class="subperiod-time">середина XI — XIII века н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Рост</span>
+                        <br>
+                        производства и ремесла
+                    </p>
+
+                    <p class="subperiod-social">Расцвет феодальных отношений</p>
+                
+                    <p class="subperod-new">
+                        Доминирование церкви. <br>
+                        Крестовые походы. <br>
+                        Политическая раздробленность.
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Подъем культуры. <br>
+                        Попытки выйти за <br>
+                        пределы Европы.
+                    </p>
+                </li>
+
+                <li class="late" data-position="2">
+                    <h4 class="subperiod-name">Позднее <br> средневековье</h4>
+                    <p class="subperiod-time">XI — XV века н.э.</p>
+
+                    <p class="subperiod-important">
+                        <span class="happened">Преодоление</span>
+                        <br>
+                        раздробленности
+                    </p>
+
+                    <p class="subperiod-social">Рост городов и городского населения</p>
+                
+                    <p class="subperod-new">
+                        Кризис феодального мира. <br>
+                        Нарастание антицерковных <br>
+                        настроений.  Появление <br>
+                        сословия бюргеров. 
+                    </p>
+
+                    <p class="subperiod-unimportant">
+                        Вторая пандемия чумы, <br>
+                        которая унесла 30-60% <br>
+                        населения Европы.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="feudalism">
+        <h2 class="section-title">Феодализм</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    Словом “феод” в средневековье называли <br>
+                    земельное владение представителя <br>
+                    господствующего сословия (феодала). <br>
+                    Феодал был обязан нести военную <br>
+                    службу на стороне своего синьора.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/middle-ages/knight.svg" alt="">
+                    <span class="text">
+                        На основе феодальной <br> 
+                        клятвы  образовался  <br>
+                        кодекс рыцаря.  А после  <br>
+                        начала крестовых  походов - <br>
+                        рыцарские ордена.
+                    </span>
+                </p>
+            </div>
+
+            <div class="right-part">
+                <p class="interesting-fact">
+                    <span class="interesting">Интересный факт:</span>
+                    <span class="fact">
+                        Феодал, будучи вассалом своего <br>
+                        синьора мог иметь собственного <br>
+                        вассала,который не подчинялся  <br>
+                        синьору своего синьора. Данное <br>
+                        правило зовется: “Вассал моего <br>
+                        вассала — не мой вассал”.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="renaissance">
+        <h2 class="section-title">Реннесанс</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    Положил начало периоду  нового времени. <br>
+                    Существовавшая со второй  половины XIV <br>
+                    по XVI век, она зародилась в Италии, вновь <br>
+                    прославляя античные идеи гуманизма и <br>
+                    ценность изобретений. <br>
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/middle-ages/feather.svg" alt="">
+                    <span class="text">
+                        В искусстве произошла <br>
+                        революция,которая вдохнула <br>
+                        новые идеалы красоты.  <br>
+                        Деятели искусства открывали <br>
+                        миру что-то новое.
+                    </span>
+                </p>
+            </div>
+            <div class="right-part">
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="wars">
+        <h2 class="section-title">Войны</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information">
+                    В средневековье было большое количество <br>
+                    различных войн: начиная от монголо-татарского <br>
+                    ига, заканчивая крестовыми походами. Большая <br>
+                    часть из них обладала территориальными, как <br>
+                    столетняя война, или религиозными, как <br>
+                    крестовые походы, мотивами.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/middle-ages/fire.svg" alt="">
+                    <span class="text">
+                        В средневековье было множество <br>
+                        случаев сожжения еретиков <br>
+                        (аутодафе). Сжигали так же и тех, <br>
+                        кто был просто неугоден церкви, <br>
+                        называя их “колдунами”.
+                    </span>
+                </p>
+            </div>
+
+            <div class="right-part">
+                <p class="information-with-picture" data-strings="5" data-picture="right">
+                    <span class="text">
+                        Большинство крестовых <br>
+                        походов были направлены <br>
+                        против мусульман. Но <br>
+                        случались и походы против <br>
+                        государств-еретиков.
+                    </span>
+                    <img src="img/middle-ages/sword.svg" alt="">
+                </p>
+                <p class="information-with-picture wide-information" data-picture="left" data-strings="5">
+                    <img src="img/middle-ages/king.svg" alt="">
+                    <span class="text">
+                        Процветали и междуусобные <br>
+                        войны во время раздробленности. <br>
+                        Феодалы, стремясь к славе <br>
+                        и богатству, нападали на <br>
+                        бывших союзников. <br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="science">
+        <h2 class="section-title">Научные достижения</h2>
+        <div class="information-wrapper">
+            <div class="left-part">
+                <p class="information"
+                >Несмотря на свою сопряженность с религией, <br>
+                    наука в средние века развивалась, но немного <br>
+                    иначе, чем в античности. Люди переходили от <br>
+                    созерцательного характера исследований к <br>
+                    экспериментальному.
+                </p>
+                <p class="information-with-picture" data-picture="right" data-strings="4">
+                    <span class="text">
+                        Была изобретена десятичная <br>
+                        система исчисления, сейчас <br>
+                        ее называют арабской, хотя <br>
+                        сделана она была в Индии.
+                    </span>
+                    <img src="img/middle-ages/math.svg" alt="">
+                </p>
+            </div>
+            <div class="right-part">
+                <p class="information-with-picture" data-picture="left" data-strings="6">
+                    <img src="img/middle-ages/brain.svg" alt="">
+                    <span class="text">
+                        Образовалось новое <br>
+                        направление в науке - <br>
+                        схоластика. Она поднимала <br>
+                        философские вопросы <br>
+                        и обладала наибольшей <br>
+                        популярностью среди ученых. 
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="religions">
+        <h2 class="section-title">Релгии</h2>
+        <div class="over-wheel-sections">
+            <section class="section__animism hidden">
+                <div class="subsection-title">Христианство</div>
+                <p class="information">
+                    Вера в единого Бога в трех обличиях: <br>
+                    Бог - сын, Бог - отец, Бог - святой дух. <br>
+                    Возкло около 33 года нашей эры. 
+                </p>
+                <p class="information info-right">
+                    Основано на вере в Спасителя - Иисуса Христа. <br>
+                    Главным литературным источником является <br>
+                    Библия. Согласно данной религии, человек создан <br>
+                    по образу и подобию Божьему и после смерти <br>
+                    его ждет загробная жизнь, в зависимости от <br>
+                    совершенных человеком деяний. Судный день <br>
+                    наступает во втором пришествии Иисуса Христа.
+                </p>
+            </section>
+            <section class="section__totemism hidden">
+                <div class="subsection-title">Ислам</div>
+                <p class="information">
+                    Вера в единого Бога - Аллаха и его пророков, <br>
+                    в частности, жившего в Мекке Мухаммеда, <br>
+                    который создал священную книгу - Коран. <br>
+                    Данная книга является действительной только <br>
+                    в оригинале.
+                </p>
+                <p class="information info-right">
+                    Возникло в VII веке нашей эры в Аравии. <br>
+                    Спасение достигается соблюдением <br>
+                    пяти основных принципов. Судный день <br>
+                    наступает с пришествием пророка после <br>
+                    Мухаммеда.
+                </p>
+            </section>
+            <section class="section__fetishism visible">
+                <div class="subsection-title">Буддизм</div>
+                <p class="information">
+                    Религиозно-философское учение, возникшее <br>
+                    в V веке до нашей эры. Основано на учении <br>
+                    Будд и его пути в Нирвану, ставшего отшельником- <br>
+                    аскетом.
+                </p>
+                <p class="information info-right">
+                    Будда на своем пути осваивал метод контроля <br>
+                    собственного сознания через медитации и <br>
+                    размышления. Так он пришел к выводу, на <br>
+                    котором основывается буддизм: люди слишком <br>
+                    сильно привязаны к мирским благам, из-за чего <br>
+                    человеческая душа деградирует, а не развивается. 
+                </p>
+            </section>
+        </div>
+
+        <div class="wheel">
+            <div class="wheel-buttons">
+                <span class="wheel-btn btn-left" data-direction="-1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+                <span class="wheel-btn btn-right" data-direction="1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+            </div>
+            <canvas class="canvas-wheel" width="1000" height="1000" data-current="fetishism">
+                К сожалению, ваш браузер яляется устаревшим 
+                и не поддерживает необходимые для данного сайта технологии, 
+                пожалуйста, скачайте новую версию Chrome по 
+                <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a>.
+            </canvas>
+            <div class="for-canvas-wheel">
+                <div class="animism">
+                    <img src="img/christian.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Христиансво</h3>
+                    <p class="canvas-text">Вера в Иисуса Христа</p>
+                </div>
+                <div class="totemism">
+                    <img src="img/islam.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Ислам</h3>
+                    <p class="canvas-text">Вера в единого Бога</p>
+                </div>
+                <div class="fetishism">
+                    <img src="img/buddism.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Буддизм</h3>
+                    <p class="canvas-text">Философское мировоззрение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/canvas-wheel.js"></script>
+</body>
+</html>

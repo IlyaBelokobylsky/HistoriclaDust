@@ -22,10 +22,6 @@ body, html {
   margin: 0;
 }
 
-html {
-  overflow: hidden;
-}
-
 ul {
   list-style-type: none;
 }
