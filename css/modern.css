@@ -343,7 +343,7 @@ a {
   top: -.5rem;
   width: 11.33rem;
   height: 31rem;
-  z-index: -1;
+  z-index: -10;
   background-size: cover;
   -webkit-filter: blur(0.33rem) brightness(50%);
           filter: blur(0.33rem) brightness(50%);
@@ -528,22 +528,22 @@ html {
 }
 
 .interbellum::before {
-  background-image: url(../../img/modern/interbellum.jpg);
+  background-image: url(../img/modern/interbellum.jpg);
   background-position: -15.37rem 0;
 }
 
 .ww2::before {
-  background-image: url(../../img/modern/wwii.webp);
+  background-image: url(../img/modern/wwii.webp);
   background-position: -25.53rem 0;
 }
 
 .cold-war::before {
-  background-image: url(../../img/modern/cold-war.jpg);
+  background-image: url(../img/modern/cold-war.jpg);
   background-position: -18.3rem 0;
 }
 
 .globalization::before {
-  background-image: url(../../img/modern/globalization.jpg);
+  background-image: url(../img/modern/globalization.jpg);
   background-position: -8.43rem 0;
 }
 

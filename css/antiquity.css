@@ -343,7 +343,7 @@ a {
   top: -.5rem;
   width: 11.33rem;
   height: 31rem;
-  z-index: -1;
+  z-index: -10;
   background-size: cover;
   -webkit-filter: blur(0.33rem) brightness(50%);
           filter: blur(0.33rem) brightness(50%);
@@ -564,42 +564,42 @@ html {
 }
 
 .krito-micken::before {
-  background-image: url(../../img/antiquity/krito-micken.jpg);
+  background-image: url(../img/antiquity/krito-micken.jpg);
   background-position: -18.77rem 0;
 }
 
 .dark-ages::before {
-  background-image: url(../../img/antiquity/dark-ages.webp);
+  background-image: url(../img/antiquity/dark-ages.webp);
   background-position: -4rem 0;
 }
 
 .archaic-greece::before {
-  background-image: url(../../img/antiquity/archaic-greece.jpg);
+  background-image: url(../img/antiquity/archaic-greece.jpg);
   background-position: -12.7rem 0;
 }
 
 .classic-greece::before {
-  background-image: url(../../img/antiquity/classic-greece.jpg);
+  background-image: url(../img/antiquity/classic-greece.jpg);
   background-position: -29.97rem 0;
 }
 
 .ellinism::before {
-  background-image: url(../../img/antiquity/ellinism.jpg);
+  background-image: url(../img/antiquity/ellinism.jpg);
   background-position: -16.4rem 0;
 }
 
 .tsars-time::before {
-  background-image: url(../../img/antiquity/tsars-time.jpg);
+  background-image: url(../img/antiquity/tsars-time.jpg);
   background-position: -21.9rem 0;
 }
 
 .republic::before {
-  background-image: url(../../img/antiquity/roman-republic.jpg);
+  background-image: url(../img/antiquity/roman-republic.jpg);
   background-position: -20.1rem 0;
 }
 
 .empire:before {
-  background-image: url(../../img/antiquity/roman-empire.jpg);
+  background-image: url(../img/antiquity/roman-empire.jpg);
   background-position: -21rem 0;
 }
 
