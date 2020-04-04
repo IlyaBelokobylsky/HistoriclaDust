@@ -7,18 +7,16 @@
 .periodization-title {
     margin-top: 2rem;
 }
-.periodization {
-    .subperiods-names {
-        font-family: 'Russo One';
-        height: 30rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 2rem;
-        li {
-            cursor: pointer;
-            padding: 1rem 0;
-        }
+.subperiods-names {
+    font-family: 'Russo One';
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    li {
+        cursor: pointer;
+        padding: 1rem 0;
     }
 }
 .list-wrapper {
@@ -50,14 +48,15 @@
             text-align: center;
             color: #fff;
             margin-top: 4rem;
-            margin-left: 0.5rem;
+            margin-left: .5rem;
             margin-bottom: 0;
             font-weight: 300;
         }
         .subperiod-time {
             font-size: .667rem;
             text-align: center;
-            margin-top: 0.333rem;
+            margin-top: .333rem;
+            margin-left: .5rem;
         }
 
         .explanation {
@@ -86,7 +85,7 @@
             margin-top: 2.4rem;
         }
 
-        .subperod-new {
+        .subperiod-new {
             margin-top: 3rem;
             margin-left: 1.1667rem;
             font-size: .667rem;
@@ -122,6 +121,7 @@
 .subsection-title {
     margin-top: 3rem;
     margin-left: 4rem;
+    margin-right: 2rem;
     color: var(--time-color-second);
     font-family: 'Russo One';
     font-size: 2rem;
@@ -137,6 +137,7 @@
     margin-left: 3rem;
     margin-top: 2rem;
     font-size: 1rem;
+    font-family: 'Oswald';
 }
 .info-right {
     margin-left: 6rem;
@@ -199,7 +200,7 @@
     display: flex;
     align-items: center;
     .fact {
-        font-weight: 200;
+        font-weight: 300;
         font-size: .67rem;
         margin-left: 3rem;
     }
@@ -215,7 +216,7 @@
     .text {
         margin-top: .33rem;
         font-size: .5rem;
-        font-weight: 200;
+        font-weight: 300;
         text-align: center;
     }
 }
@@ -227,7 +228,7 @@
     section {
         position: absolute;
         .subsection-title {
-            margin-top: 0;
+            margin-top: 1rem;
         }
         top: 0;
     }
@@ -238,4 +239,10 @@
 }
 .for-canvas-wheel {
     display: none;
+}
+.desktop, .desktop-flex {
+    display: none;
+}
+.religions {
+    overflow: hidden;
 }

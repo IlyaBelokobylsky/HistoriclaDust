@@ -499,12 +499,12 @@ a {
 }
 
 html {
-  --time-color-first: var(--first-color-middle-ages);
-  --time-color-second: var(--font-color-middle-ages);
+  --time-color-first: var(--first-color-modern);
+  --time-color-second: var(--font-color-modern);
 }
 
 .subperiods-names {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .subperiods li[data-position='0'] {
@@ -522,19 +522,33 @@ html {
   left: 20.66rem;
 }
 
-.early::before {
-  background-image: url(../../img/middle-ages/early.jpg);
-  background-position: -17.167rem 0;
+.subperiods li[data-position='3'] {
+  z-index: 3;
+  left: 30.99rem;
 }
 
-.developed::before {
-  background-image: url(../../img/middle-ages/developed.jpg);
-  background-position: -7.63rem 0;
+.interbellum::before {
+  background-image: url(../../img/modern/interbellum.jpg);
+  background-position: -15.37rem 0;
 }
 
-.late::before {
-  background-image: url(../../img/middle-ages/late.webp);
-  background-position: -19.2rem 0;
+.ww2::before {
+  background-image: url(../../img/modern/wwii.webp);
+  background-position: -25.53rem 0;
+}
+
+.cold-war::before {
+  background-image: url(../../img/modern/cold-war.jpg);
+  background-position: -18.3rem 0;
+}
+
+.globalization::before {
+  background-image: url(../../img/modern/globalization.jpg);
+  background-position: -8.43rem 0;
+}
+
+.british-empire-img {
+  width: 20rem;
 }
 
 @media (min-width: 993px) {
@@ -645,124 +659,21 @@ html {
     z-index: 2;
     left: 42rem;
   }
-  .accolade img {
-    height: 14rem;
+  .subperiods li[data-position='3'] {
+    z-index: 3;
+    left: 63rem;
   }
-  .slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
+  .landing-in-america img {
+    width: 20rem;
   }
-  .slider .subsection-title {
-    margin-top: -10rem;
+  .kunesdorf img {
+    width: 16rem;
   }
-  .slider .slider-images {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .first-photo img {
+    height: 10rem;
   }
-  .slider .slider-images .img-with-text {
-    position: relative;
-  }
-  .slider .slider-images .img-with-text img {
-    border-radius: 0;
-    height: 14rem;
-  }
-  .slider .slider-images .img-with-text:not(.visible-img) {
-    z-index: -10;
-    display: none;
-    opacity: 0;
-  }
-  .slider .slider-images .active-in-future {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    margin-left: -5rem;
-    margin-right: -5rem;
-    opacity: 1;
-    z-index: -5;
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  .slider .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 25rem;
-    top: 35%;
-  }
-  .slider .slider-btn {
-    display: block;
-    cursor: pointer;
-    padding: 1rem;
-    border: none;
-    background: none;
-    height: 2rem;
-    width: 1.5rem;
-    opacity: 0.5;
-    -webkit-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-  }
-  .slider .slider-btn:hover {
-    opacity: 1;
-  }
-  .slider .slider-btn svg {
-    position: relative;
-    top: -1rem;
-    left: -.75rem;
-  }
-  .slider .slider-btn:focus {
-    outline: none;
-  }
-  .slider .slider-left {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  .slider .slider-left:active {
-    -webkit-transform: rotate(90deg) translateY(1rem);
-            transform: rotate(90deg) translateY(1rem);
-  }
-  .slider .slider-right {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-  .slider .slider-right:active {
-    -webkit-transform: rotate(-90deg) translateY(1rem);
-            transform: rotate(-90deg) translateY(1rem);
-  }
-  .slider .slider-position {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 1rem;
-    position: relative;
-    margin-left: -3.5rem;
-  }
-  .slider .slider-position li {
-    position: relative;
-    top: 0;
-    margin-left: 1rem;
-    border-radius: 10px;
-    width: 1.5rem;
-    height: .3rem;
-    background-color: var(--time-color-first);
-  }
-  .slider .slider-position .active {
-    background-color: #4D7198;
+  .appolo11 img {
+    width: 20rem;
   }
 }
-/*# sourceMappingURL=middle-ages.css.map */
+/*# sourceMappingURL=modern.css.map */

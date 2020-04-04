@@ -1,5 +1,5 @@
-const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-function makeWheel(){
+function initCanvasWheel() {
+    const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     'use strict';
     const wheel = document.querySelector('.canvas-wheel'),
         infoFromArr = document.querySelector('.for-canvas-wheel').children,
@@ -76,21 +76,23 @@ function makeWheel(){
         angleBefore += ANGLE;
         ctx.restore();
     }
-};
-window.addEventListener('load', makeWheel);
 
-// make margin-top for wheel and buttons,
-// because information elems have position
-// absolute
-const informationArr = Array.from(document.querySelector('.over-wheel-sections').children);
-let marginTop = 0;
-informationArr.forEach((item, index) => {
-    let heightBefore = 0;
-    informationArr[index+1] ?
-    heightBefore = parseFloat(getComputedStyle(informationArr[index+1]).height) :
-    heightBefore = 0;
-    parseFloat(getComputedStyle(item).height) > heightBefore ?
-    marginTop =  parseFloat(getComputedStyle(item).height) :
-    marginTop = heightBefore;
-});
-document.querySelector('.wheel-buttons').style.marginTop = `${marginTop + fontSize * 3}px`;
+    if (document.documentElement.clientWidth < 993) {
+        // make margin-top for wheel and buttons,
+        // because information elems have position
+        // absolute
+        const informationArr = Array.from(document.querySelector('.over-wheel-sections').children);
+        let marginTop = 0;
+        informationArr.forEach((item, index) => {
+            let heightBefore = 0;
+            informationArr[index+1] ?
+            heightBefore = parseFloat(getComputedStyle(informationArr[index+1]).height) :
+            heightBefore = 0;
+            parseFloat(getComputedStyle(item).height) > heightBefore ?
+            marginTop =  parseFloat(getComputedStyle(item).height) :
+            marginTop = heightBefore;
+        });
+        document.querySelector('.wheel-buttons').style.marginTop = `${marginTop + fontSize * 3}px`;
+    }
+}
+window.addEventListener('load', initCanvasWheel);

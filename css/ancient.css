@@ -206,14 +206,18 @@ a {
           transform: translateX(-1rem);
 }
 
-.section-title {
+.section-title, .periodization-title {
   font-family: 'Russo One';
   font-size: 2.4rem;
-  margin-top: 2rem;
+  margin-top: 4.67rem;
   margin-left: 1rem;
 }
 
-.periodization .subperiods-names {
+.periodization-title {
+  margin-top: 2rem;
+}
+
+.subperiods-names {
   font-family: 'Russo One';
   height: 30rem;
   display: -webkit-box;
@@ -229,7 +233,7 @@ a {
   margin-left: 2rem;
 }
 
-.periodization .subperiods-names li {
+.subperiods-names li {
   cursor: pointer;
   padding: 1rem 0;
 }
@@ -272,7 +276,7 @@ a {
   text-align: center;
   color: #fff;
   margin-top: 4rem;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   margin-bottom: 0;
   font-weight: 300;
 }
@@ -280,7 +284,8 @@ a {
 .subperiods li .subperiod-time {
   font-size: .667rem;
   text-align: center;
-  margin-top: 0.333rem;
+  margin-top: .333rem;
+  margin-left: .5rem;
 }
 
 .subperiods li .explanation {
@@ -312,13 +317,13 @@ a {
   margin-top: 2.4rem;
 }
 
-.subperiods li .subperod-new {
+.subperiods li .subperiod-new {
   margin-top: 3rem;
   margin-left: 1.1667rem;
   font-size: .667rem;
 }
 
-.subperiods li .subperod-new sub {
+.subperiods li .subperiod-new sub {
   font-size: .333rem;
 }
 
@@ -348,6 +353,7 @@ a {
 .subsection-title {
   margin-top: 3rem;
   margin-left: 4rem;
+  margin-right: 2rem;
   color: var(--time-color-second);
   font-family: 'Russo One';
   font-size: 2rem;
@@ -365,6 +371,7 @@ a {
   margin-left: 3rem;
   margin-top: 2rem;
   font-size: 1rem;
+  font-family: 'Oswald';
 }
 
 .info-right {
@@ -430,7 +437,7 @@ a {
 }
 
 .interesting-fact .fact {
-  font-weight: 200;
+  font-weight: 300;
   font-size: .67rem;
   margin-left: 3rem;
 }
@@ -455,7 +462,7 @@ a {
 .img-with-text .text {
   margin-top: .33rem;
   font-size: .5rem;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -471,7 +478,7 @@ a {
 }
 
 .over-wheel-sections section .subsection-title {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .canvas-wheel {
@@ -481,6 +488,14 @@ a {
 
 .for-canvas-wheel {
   display: none;
+}
+
+.desktop, .desktop-flex {
+  display: none;
+}
+
+.religions {
+  overflow: hidden;
 }
 
 html {
@@ -662,7 +677,7 @@ html {
   top: 7rem;
 }
 
-.writing .main-part {
+.writing .left-part {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,7 +688,7 @@ html {
           align-items: center;
 }
 
-.writing .main-part .information {
+.writing .left-part .information {
   margin-top: 0;
 }
 
@@ -686,7 +701,7 @@ html {
   margin-left: 3rem;
 }
 
-.writing .img-with-text img {
+.writing .left-part .img-with-text img {
   height: 11rem;
   border-radius: 0;
 }
@@ -699,5 +714,150 @@ html {
   left: 50%;
   -webkit-transform: translateX(-35%);
           transform: translateX(-35%);
+}
+
+@media (min-width: 993px) {
+  .desktop-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .desktop {
+    display: block;
+  }
+  .section-title, .periodization-title {
+    margin-top: 4rem;
+    margin-left: 4rem;
+  }
+  .periodization-title {
+    margin-top: 2rem;
+  }
+  .periodization .subsection-title {
+    margin-left: 9rem;
+  }
+  .periodization ol.subperiods-names {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    height: 20rem;
+    grid-column-gap: 6rem;
+    grid-row-gap: 1rem;
+    margin-left: 6rem;
+  }
+  .periodization ol.subperiods-names .name-wide {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .subperiods {
+    width: 21rem;
+    height: 20rem;
+    left: calc(100vw - 21rem);
+    margin-top: -1rem;
+  }
+  .subperiods li {
+    width: 21rem;
+    height: 20rem;
+  }
+  .subperiods li .subperiod-name {
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+  }
+  .subperiods li .subperiod-time {
+    margin-left: 2.5rem;
+  }
+  .subperiods li .subperiod-social {
+    width: 7rem;
+  }
+  .subperiods li .subperiod-new {
+    margin-left: 3rem;
+    margin-right: -3rem;
+  }
+  .subperiods li::before {
+    width: 22rem;
+    height: 21rem;
+    background-position: 0 0;
+  }
+  .subperiods-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .subsection-title {
+    margin-left: 9rem;
+    margin-top: 2rem;
+  }
+  .information-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .information, .information-with-picture, .interesting-fact {
+    margin-left: 6rem;
+  }
+  .wheel {
+    position: relative;
+    left: 15rem;
+  }
+}
+
+@media (min-width: 993px) {
+  .subperiods li[data-position='0'] {
+    z-index: 0;
+    left: 0rem;
+  }
+  .subperiods li[data-position='1'] {
+    z-index: 1;
+    left: 21rem;
+  }
+  .subperiods li[data-position='2'] {
+    z-index: 2;
+    left: 42rem;
+  }
+  .subperiods li[data-position='3'] {
+    z-index: 3;
+    left: 63rem;
+  }
+  .mesopotamia {
+    margin-left: 6.75rem;
+  }
+  .vavilons-tower img {
+    height: 17rem;
+  }
+  .cuneiform {
+    margin-left: 6rem;
+    margin-right: 3rem;
+  }
+  .cuneiform + .information {
+    margin-left: 0;
+  }
+  .other-inventions__inventions {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin-left: 3rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .ancient-wheel {
+    margin-left: -10rem;
+  }
+  .ancient-wheel img {
+    height: 16rem;
+  }
+  .table-from-kish img {
+    width: 25rem;
+  }
 }
 /*# sourceMappingURL=ancient.css.map */

@@ -1,0 +1,105 @@
+@media (min-width: 993px) {
+    .subperiods {
+        @for $i from 0 through 2 {
+            li[data-position='#{$i}'] {
+                z-index: $i;
+                left: 21rem * $i;
+            }
+        }
+    }
+    .accolade img {
+        height: 14rem;
+    }
+    .slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .subsection-title {
+            margin-top: -10rem;
+        }
+        .slider-images {
+            display: flex;
+            justify-content: center;
+            .img-with-text { 
+                position: relative;
+                img {
+                    border-radius: 0;
+                    height: 14rem;
+                }
+                &:not(.visible-img) {
+                    z-index: -10;
+                    display: none;
+                    opacity: 0;
+                }
+            }
+            .active-in-future {
+                transform: scale(0.5);
+                margin-left: -5rem;
+                margin-right: -5rem;
+                opacity: 1;
+                z-index: -5;
+                filter: blur(5px);
+            }
+        }
+        .buttons {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            width: 25rem;
+            top: 35%;
+        }
+        .slider-btn {
+            display: block;
+            cursor: pointer;
+            padding: 1rem;
+            border: none;
+            background: none;
+            height: 2rem;
+            width: 1.5rem;
+            opacity: 0.5;
+            transition: .25s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+            svg {
+                position: relative;
+                top: -1rem;
+                left: -.75rem;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .slider-left {
+            transform: rotate(90deg);
+            &:active {
+                transform: rotate(90deg) translateY(1rem); 
+            }
+        }
+        .slider-right {
+            transform: rotate(-90deg);
+            &:active {
+                transform: rotate(-90deg) translateY(1rem); 
+            }
+        }
+        .slider-position {
+            display: flex;
+            margin-top: 1rem;
+            position: relative;
+            margin-left: -3.5rem;
+            li {
+                position: relative;
+                top: 0;
+                margin-left: 1rem;
+                border-radius:10px;
+                width: 1.5rem;
+                height: .3rem;
+                background-color: var(--time-color-first);
+            }
+            .active {
+                background-color: #4D7198;
+            }
+        }
+    }
+}

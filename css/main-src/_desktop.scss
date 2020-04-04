@@ -1,0 +1,85 @@
+@media (min-width: 993px) {
+    .desktop-flex {
+        display: flex;
+    }
+    .desktop {
+        display: block;
+    }
+    .section-title, .periodization-title {
+        margin-top: 4rem;
+        margin-left: 4rem;
+    }
+    .periodization-title {
+        margin-top: 2rem;
+    }
+
+    .periodization .subsection-title {
+        margin-left: 9rem;
+    }
+    .periodization ol.subperiods-names {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 20rem;
+        grid-column-gap: 6rem;
+        grid-row-gap: 1rem;
+        margin-left: 6rem;
+        .name-wide {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-self: center;
+        }
+    }
+    .subperiods {
+        width: 21rem;
+        height: 20rem;
+        left: calc(100vw - 21rem);
+        margin-top: -1rem;
+        li {
+            width: 21rem;
+            height: 20rem;
+            .subperiod-name {
+                margin-top: 2rem;
+                margin-left: 2.5rem;
+            }
+            .subperiod-time {
+                margin-left: 2.5rem;
+            }
+            .subperiod-social {
+                width: 7rem;
+            }
+            .subperiod-new {
+                margin-left: 3rem;
+                margin-right: -3rem;
+            }
+            &::before {
+                width: 22rem;
+                height: 21rem;
+                background-position: 0 0;
+            }
+        }
+    }
+    .subperiods-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+
+    .subsection-title {
+        margin-left: 9rem;
+        margin-top: 2rem;
+    }
+    .information-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: stretch;
+        align-items: center;
+    }
+    .information, .information-with-picture, .interesting-fact {
+        margin-left: 6rem;
+    }
+    .wheel {
+        position: relative;
+        left: 15rem;
+    }
+}

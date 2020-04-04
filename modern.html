@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/modern.css">
+    <title>Новейшее время</title>
+</head>
+<body>
+    <div class="loader">
+        <canvas class="loading-object" width="500" height="500">
+            Пожалуйста, подождите
+        </canvas>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <svg width="0" height="0" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="wheel-button-svg" class="wheel-button-svg">
+            <path d="M18.2264 0.600636C17.7192 0.387455 17.1295 0.50726 16.7381 0.896624L0.400156 13.7809C-0.133385 14.3129 -0.133385 15.1851 0.400156 15.7189L16.7381 28.5415C16.9979 28.8057 17.3489 28.9449 17.7016 28.9449C17.8807 28.9449 18.0579 28.9079 18.2264 28.841C18.7371 28.6278 19.0425 28.1292 19.0425 27.5742V19.8944C36.5142 19.8944 44.1558 24.8416 42.9922 40.5977C50.3933 15.3894 36.1878 9.69167 19.0425 9.69167V1.86563C19.0408 1.31065 18.7371 0.812056 18.2264 0.600636Z"/>
+        </symbol>
+    </svg>
+        
+    <button class="hamburger">
+        <span class="hamburger__line_first"></span>
+        <span class="hamburger__line_second"></span>
+        <span class="hamburger__line_third"></span>
+    </button>
+
+
+    <section class="periodization">
+        <h2 class="periodization-title">
+            Периодизация 
+            <br>
+            новейшего времени
+        </h2>
+    
+        <div class="list-wrapper">
+            <ol class="subperiods-names">
+                <li class="interbellum">Интербеллум</li>
+                <li class="ww2">Вторя <br> мировая война</li>
+                <li class="cold-war">Холодная война</li>
+                <li class="globalization">Глобализация</li>
+            </ol>
+
+
+            <ul class="subperiods">
+                <li class="interbellum" data-position="0">
+                    <h4 class="subperiod-name">Интербеллум</h4>
+                    <p class="subperiod-time">1917 —  1939 года н.э.</p>
+
+                    <div class="subperiods-wrapper">
+                        <p class="subperiod-important">
+                            <span class="happened">Рост популярности</span>
+                            <br>
+                            социализма и фашизма
+                        </p>
+
+                        <p class="subperiod-social">Антисемитизм и нацизм</p>
+                    
+                        <p class="subperiod-new">
+                            Конец Первой мировой войны, <br>
+                            великая депрессия. Образование <br>
+                            СССР. Начало Второй <br>
+                            мировой войны.
+                        </p>
+
+                        <p class="subperiod-unimportant">
+                            Является межвоенным <br>
+                            периодом.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ww2" data-position="1">
+                    <h4 class="subperiod-name">Вторая мировая <br> война</h4>
+                    <p class="subperiod-time">1939 — 1945 года н.э.</p>
+
+                    <div class="subperiods-wrapper">
+                        <p class="subperiod-important">
+                            <span class="happened">Рост</span>
+                            <br>
+                            военной промышленности
+                        </p>
+
+                        <p class="subperiod-social">Борьба с нацизмом и фашизмом</p>
+                    
+                        <p class="subperiod-new">
+                            Ксенофобия и рассовая дискриминация. <br>
+                            Совершенствование технологий. <br>
+                            Изобретение ядерной бомбы. <br>
+                        </p>
+
+                        <p class="subperiod-unimportant">
+                            Скачок в развитии <br>
+                            военного дела.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="cold-war" data-position="2">
+                    <h4 class="subperiod-name">Холодная <br> война</h4>
+                    <p class="subperiod-time">1946 — 1991 года н.э.</p>
+
+                    <div class="subperiods-wrapper">
+                        <p class="subperiod-important">
+                            <span class="happened">Ускорение</span>
+                            <br>
+                            технического прогресса
+                        </p>
+
+                        <p class="subperiod-social">Железный занавес</p>
+                    
+                        <p class="subperiod-new">
+                            Первые полеты в космос <br>
+                            и высадка на Луну. <br>
+                            Появление мощной <br>
+                            вычислительной техники.
+                        </p>
+
+                        <p class="subperiod-unimportant">
+                            Гонка вооружений <br>
+                            между США и СССР. 
+                        </p>
+                    </div>
+                </li>
+                <li class="globalization" data-position="3">
+                    <h4 class="subperiod-name">Глобализация</h4>
+                    <p class="subperiod-time">1991 год — наши дни</p>
+
+                    <div class="subperiods-wrapper">
+                        <p class="subperiod-important">
+                            <span class="happened">Популяризация</span>
+                            <br>
+                            интернета
+                        </p>
+
+                        <p class="subperiod-social">Информационное общество</p>
+                    
+                        <p class="subperiod-new">
+                            Время смартфонов и компьютеров. <br>
+                            Загрязнение планеты. Развитие <br>
+                            интернет-технологий. 
+                        </p>
+
+                        <p class="subperiod-unimportant">
+                            Распад СССР. Время <br>
+                            огромных потоков <br>
+                            информации ежедневно
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <seciton class="world-wars">
+        <h2 class="section-title">Мировые войны</h2>
+        <div class="information-wrapper">
+            <div class="ww-1">
+                <h3 class="subsection-title">Первая мировая война</h3>
+                <p class="information">
+                    Начавшаяся и-за убийства эрцгерцога австрийского <br>
+                    Франца Фердинанда сербским националистом <br>
+                    Гаврилой Принципом 28 июля 1914 и закончившаяся <br>
+                    с подписанием мирного договора 11 ноября 1918, а  <br>
+                    после и Версальского мирного договора (28.06.1919), <br>
+                    стала последним конфликтом в жизни многих империй. <br>
+                    Из-за этой войны распались Российская, Германская, <br>
+                    Османская, Австро-Венгерская империи.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/modern/soviet-union.svg" alt="">
+                    <span class="text">
+                        Одной из причин начала <br>
+                        революций 1917 года в <br>
+                        Российской империи стало <br>
+                        вступлениеее в войну. Как итог - <br>
+                        установление советской власти.
+                    </span>
+                </p>
+                <p class="information">
+                    Верскальский мирный договор послужил <br>
+                    одной из причин установления нацисткой <br>
+                    диктатуры в Германии и фашистской в Италии, <br>
+                    последующего начала Второй мировой войны.
+                </p>
+            </div>
+            <div class="ww-2">
+                <h3 class="subsection-title">Вторая мировая война</h3>
+                <p class="information">
+                    Некоторые историки утверждают, что началась она <br>
+                    еще в 1931 году, с момента оккупации Маньчжурии <br>
+                    Японией, другие - в 1936 (приход к власти А. Гитлера). <br>
+                    Однако официально она началась 1 сентября 1941 <br>
+                    года. Датой завершения принято называть 2 сентября <br>
+                    1945 года. Является наиболее масштабным военным <br>
+                    конфликтом за всю историю человечества.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/modern/cloud.svg" alt="">
+                    <span class="text">
+                        Впервые было применено <br>
+                        ядерное оружие. Удары <br>
+                        производились на японские <br>
+                        города Хиросиму и Нагасаки <br>
+                        по приказу США.
+                    </span>
+                </p>
+                <p class="information-with-picture" data-picture="right" data-strings="5">
+                    <span class="text">
+                        Война дала технологический <br>
+                        толчок странам-участницам, с <br>
+                        целью опередить друг друга в <br>
+                        научном развитии и одержать <br>
+                        победу в конфлитке.
+                    </span>
+                    <img src="img/modern/science.svg" alt="">
+                </p>
+            </div>
+        </div>
+    </seciton>
+
+
+    <section class="colonialism-end">
+        <h2 class="section-title">Конец колониализма</h2>
+        <p class="information">
+            В результате начала процесса демократизации <br>
+            и гуманизации общества начались движения за <br>
+            независимость колоний от метрополий. Большая <br>
+            часть этих движений была в Азии и Африке.
+        </p>
+        <div class="information-wrapper">
+            <div class="asia">
+                <h3 class="subsection-title">Азия</h3>
+                <p class="information">
+                    В результате японской оккупации, в странах <br>
+                    юго-восточной Азии были ликвидированы <br>
+                    колониальные органы власти. Население <br>
+                    вело борьбу с оккупантами, а затем и с <br>
+                    метрополиями. Наиболее широкий размах <br> 
+                    приобрело движение во Вьетнаме, который <br>
+                    после был разделен на два государства: <br>
+                    с просоветским режимом и проамериканским.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="6">
+                    <img src="img/modern/gandhi.svg" alt="">
+                    <span class="text">
+                        Самым известным борцом за <br>
+                        независимость Индии был  <br>  
+                        Махатма Ганди. В самой Индии, <br>
+                        после борьбы за независимость, <br>
+                        остались спорные территории <br>
+                        с Пакистаном и Китаем.
+                    </span>
+                </p>
+            </div>
+            <div class="africa">
+                <h3 class="subsection-title">Африка</h3>
+                <p class="information">
+                    Желая добиться независимости, африканские <br>
+                    страны вступали в военные конфликты, в ходе <br>
+                    которых страны западного и восточного блоков <br>
+                    сражались между собой во время холодной войны. <br>
+                    Однако до сих пор продолжается колониальная <br>
+                    политика в Африке за счет экономической зависимости <br>
+                    от Франции.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/modern/egypt.svg" alt="">
+                    <span class="text">
+                        Наиболее серьезным был <br>
+                        конфликт в Египте, в результате <br>
+                        которого произошел “Суэцкий <br>
+                        кризис”.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="science">
+        <h2 class="section-title">Научные достижения</h2>
+        <div class="information-wrapper">
+            <div class="nuclear">
+                <h3 class="subsection-title">Ядерная энергетика</h3>
+                <p class="information">
+                    Изобретенная в США первая ядерная бомба дала <br>
+                    начало новой эре. При помощи деления ядер <br>
+                    плутония-239 и урана-235 люди научились  добывать <br>
+                    электроэнергию так, чтобы не истощать ресурсы  <br>
+                    планеты, при этом не сильно загрязняя ее.
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="4">
+                    <img src="img/modern/radiation.svg" alt="">
+                    <span class="text">
+                        К сожалению, у ядерной энергетики <br>
+                        есть и минусы. В случае аварии, как <br>
+                        например в Чернобыле, наступает <br>
+                        катастрофа клобального мастштаба.
+                    </span>
+                </p>
+            </div>
+            <div class="alternate">
+                <h3 class="subsection-title">Альтернативная энергетика</h3>
+                <p class="information">
+                    В XXI веке остро встал вопрос получение энергии <br>
+                    без вреда окружающей среде. Получение энергии <br>
+                    от ветра или солнца является благоприятной для <br>
+                    окружающей среды альтернативой электростанций <br>
+                    прошлого. К тому же, рисков аварий на ее производстве <br>
+                    фактически нет.
+                </p>
+            </div>
+        </div>
+        <div class="information-wrapper internet">
+            <div class="left-part">
+                <h3 class="subsection-title">Интернет и полеты в космос</h3>
+                <p class="information">
+                    Первый компьютер был изобретен в 1946 году <br>
+                    с целью выполнения вычислительных операций. <br>
+                    В 1961 году Ю. А. Гагарин совершил первый в  <br>
+                    истории человечества полет в космос, а в 1969 <br>
+                    Нил Армстронг, Майкл Коллинз и Базз Олдрин  <br>
+                    впервые высадились на Луну. А в 1984 году  <br> 
+                    была изобретеная сеть под названием Интернет, <br>
+                    которой сейчас пользуется половина населения Земли. 
+                </p>
+                <p class="information-with-picture" data-picture="left" data-strings="5">
+                    <img src="img/modern/smartphone.svg" alt="">
+                    <span class="text">
+                        Первый компьютер был размером <br>
+                        со спортзал, теперь же гораздо более <br>
+                        мощный его прототип помещается <br>
+                        в кармане. Смартфон является  <br>
+                        неотъемлимой частью нашей жизни.
+                    </span>
+                </p>
+            </div>
+            <div class="right-part">
+                <div class="img-with-text appolo11 desktop-flex">
+                    <img src="img/modern/appolo11-crew.jpg" alt="">
+                    <span class="text">Экипаж Апполон-11 - первого корабля, высадившегося на Луне (1969 год)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="religions">
+        <h2 class="section-title">Релгии</h2>
+        <div class="over-wheel-sections">
+            <section class="section__animism hidden">
+                <div class="subsection-title">Христианство</div>
+                <p class="information">
+                    Вера в единого Бога в трех обличиях: <br>
+                    Бог - сын, Бог - отец, Бог - святой дух. <br>
+                    Возкло около 33 года нашей эры. 
+                </p>
+                <p class="information info-right">
+                    Основано на вере в Спасителя - Иисуса Христа. <br>
+                    Главным литературным источником является <br>
+                    Библия. Согласно данной религии, человек создан <br>
+                    по образу и подобию Божьему и после смерти <br>
+                    его ждет загробная жизнь, в зависимости от <br>
+                    совершенных человеком деяний. Судный день <br>
+                    наступает во втором пришествии Иисуса Христа.
+                </p>
+            </section>
+            <section class="section__totemism hidden">
+                <div class="subsection-title">Ислам</div>
+                <p class="information">
+                    Вера в единого Бога - Аллаха и его пророков, <br>
+                    в частности, жившего в Мекке Мухаммеда, <br>
+                    который создал священную книгу - Коран. <br>
+                    Данная книга является действительной только <br>
+                    в оригинале.
+                </p>
+                <p class="information info-right">
+                    Возникло в VII веке нашей эры в Аравии. <br>
+                    Спасение достигается соблюдением <br>
+                    пяти основных принципов. Судный день <br>
+                    наступает с пришествием пророка после <br>
+                    Мухаммеда.
+                </p>
+            </section>
+            <section class="section__fetishism visible">
+                <div class="subsection-title">Буддизм</div>
+                <p class="information">
+                    Религиозно-философское учение, возникшее <br>
+                    в V веке до нашей эры. Основано на учении <br>
+                    Будд и его пути в Нирвану, ставшего отшельником- <br>
+                    аскетом.
+                </p>
+                <p class="information info-right">
+                    Будда на своем пути осваивал метод контроля <br>
+                    собственного сознания через медитации и <br>
+                    размышления. Так он пришел к выводу, на <br>
+                    котором основывается буддизм: люди слишком <br>
+                    сильно привязаны к мирским благам, из-за чего <br>
+                    человеческая душа деградирует, а не развивается. 
+                </p>
+            </section>
+        </div>
+
+        <div class="wheel">
+            <div class="wheel-buttons">
+                <span class="wheel-btn btn-left" data-direction="-1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+                <span class="wheel-btn btn-right" data-direction="1">
+                    <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                        <use xlink:href="#wheel-button-svg"/>
+                    </svg>
+                </span>
+            </div>
+            <canvas class="canvas-wheel" width="1000" height="1000">
+                К сожалению, ваш браузер яляется устаревшим 
+                и не поддерживает необходимые для данного сайта технологии, 
+                пожалуйста, скачайте новую версию Chrome по 
+                <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a>.
+            </canvas>
+            <div class="for-canvas-wheel">
+                <div class="animism">
+                    <img src="img/christian.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Христиансво</h3>
+                    <p class="canvas-text">Вера в Иисуса Христа</p>
+                </div>
+                <div class="totemism">
+                    <img src="img/islam.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Ислам</h3>
+                    <p class="canvas-text">Вера в единого Бога</p>
+                </div>
+                <div class="fetishism">
+                    <img src="img/buddism.jpg" alt="" class="background-image">
+                    <h3 class="canvas-title">Буддизм</h3>
+                    <p class="canvas-text">Философское мировоззрение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/canvas-wheel.js"></script>
+</body>
+</html>

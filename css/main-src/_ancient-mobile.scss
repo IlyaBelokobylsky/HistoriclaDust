@@ -124,7 +124,7 @@ html {
 }
 
 
-.writing .main-part {
+.writing .left-part {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -139,7 +139,7 @@ html {
     margin-right: .5rem;
     margin-left: 3rem;
 }
-.writing .img-with-text img {
+.writing .left-part .img-with-text img {
     height: 11rem;
     border-radius: 0;
 }

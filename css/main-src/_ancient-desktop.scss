@@ -1,0 +1,40 @@
+@media (min-width: 993px) {
+    .subperiods {
+        @for $i from 0 through 3 {
+            li[data-position='#{$i}'] {
+                z-index: $i;
+                left: 21rem * $i;
+            }
+        }
+    }
+    .mesopotamia {
+        margin-left: 6.75rem;
+    }
+    .vavilons-tower img {
+        height: 17rem;
+    }
+    .cuneiform {
+        // display: block;
+        margin-left: 6rem;
+        margin-right: 3rem;
+    }
+    .cuneiform + .information {
+        margin-left: 0;
+    }
+    .other-inventions__inventions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 3rem;
+        transform: translateX(-50%);
+    }
+    .ancient-wheel {
+        margin-left: -10rem;
+        img {
+            height: 16rem;
+        }
+    } 
+
+    .table-from-kish img {
+        width: 25rem;
+    }
+}

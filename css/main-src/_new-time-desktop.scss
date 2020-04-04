@@ -1,0 +1,19 @@
+@media (min-width: 993px) {
+    .subperiods {
+        @for $i from 0 through 2 {
+            li[data-position='#{$i}'] {
+                z-index: $i;
+                left: 21rem * $i;
+            }
+        }
+    }
+    .landing-in-america img {
+        width: 20rem;
+    }
+    .kunesdorf img {
+        width: 16rem;
+    }
+    .first-photo img {
+        height: 10rem;
+    }
+}

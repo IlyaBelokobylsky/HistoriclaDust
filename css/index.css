@@ -518,7 +518,7 @@ main .time-straight .period-focus {
   border: none;
   padding: .25rem;
   left: 50%;
-  bottom: .667rem;
+  bottom: 1.667rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transition: .2s ease-in-out;

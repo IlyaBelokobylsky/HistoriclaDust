@@ -1,0 +1,34 @@
+html {
+    --time-color-first: var(--first-color-modern);
+    --time-color-second: var(--font-color-modern);
+}
+.subperiods-names {
+    font-size: 1.2rem;
+}
+.subperiods {
+    @for $i from 0 through 3 {
+        li[data-position='#{$i}'] {
+            z-index: $i;
+            left: 10.33rem * $i;
+        }
+    }
+}
+.interbellum::before {
+    background-image: url(../../img/modern/interbellum.jpg);
+    background-position: -15.37rem 0;
+}
+.ww2::before {
+    background-image: url(../../img/modern/wwii.webp);
+    background-position: -25.53rem 0;
+}
+.cold-war::before {
+    background-image: url(../../img/modern/cold-war.jpg);
+    background-position: -18.3rem 0;
+}
+.globalization::before {
+    background-image: url(../../img/modern/globalization.jpg);
+    background-position: -8.43rem 0;
+}
+.british-empire-img {
+    width: 20rem;
+}

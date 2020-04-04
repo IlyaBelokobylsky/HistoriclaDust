@@ -2,8 +2,9 @@ html {
     --time-color-first: var(--first-color-new-time);
     --time-color-second: var(--font-color-new-time);
 }
-.subperiods-names {
+.periodization .subperiods-names {
     font-size: 1.5rem;
+    margin-left: 1.5rem;
 }
 .subperiods {
     @for $i from 0 through 2 {
@@ -15,15 +16,15 @@ html {
 }
 .early::before {
     background-image: url(../../img/new-time/early.jpg);
-    background-position: -17.67rem 0;
+    background-position: 13.47rem 0;
 }
-.developed::before {
+.elightnment::before {
     background-image: url(../../img/new-time/elightenment.jpg);
-    background-position: -7.63rem 0;
+    background-position: -29.77rem 0;
 }
-.late::before {
+.long-xix-century::before {
     background-image: url(../../img/new-time/xix-century.jpg);
-    background-position: -19.2rem 0;
+    background-position: -20rem 0;
 }
 .british-empire-img {
     width: 20rem;

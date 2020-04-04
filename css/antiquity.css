@@ -206,14 +206,18 @@ a {
           transform: translateX(-1rem);
 }
 
-.section-title {
+.section-title, .periodization-title {
   font-family: 'Russo One';
   font-size: 2.4rem;
-  margin-top: 2rem;
+  margin-top: 4.67rem;
   margin-left: 1rem;
 }
 
-.periodization .subperiods-names {
+.periodization-title {
+  margin-top: 2rem;
+}
+
+.subperiods-names {
   font-family: 'Russo One';
   height: 30rem;
   display: -webkit-box;
@@ -229,7 +233,7 @@ a {
   margin-left: 2rem;
 }
 
-.periodization .subperiods-names li {
+.subperiods-names li {
   cursor: pointer;
   padding: 1rem 0;
 }
@@ -272,7 +276,7 @@ a {
   text-align: center;
   color: #fff;
   margin-top: 4rem;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   margin-bottom: 0;
   font-weight: 300;
 }
@@ -280,7 +284,8 @@ a {
 .subperiods li .subperiod-time {
   font-size: .667rem;
   text-align: center;
-  margin-top: 0.333rem;
+  margin-top: .333rem;
+  margin-left: .5rem;
 }
 
 .subperiods li .explanation {
@@ -312,13 +317,13 @@ a {
   margin-top: 2.4rem;
 }
 
-.subperiods li .subperod-new {
+.subperiods li .subperiod-new {
   margin-top: 3rem;
   margin-left: 1.1667rem;
   font-size: .667rem;
 }
 
-.subperiods li .subperod-new sub {
+.subperiods li .subperiod-new sub {
   font-size: .333rem;
 }
 
@@ -348,6 +353,7 @@ a {
 .subsection-title {
   margin-top: 3rem;
   margin-left: 4rem;
+  margin-right: 2rem;
   color: var(--time-color-second);
   font-family: 'Russo One';
   font-size: 2rem;
@@ -365,6 +371,7 @@ a {
   margin-left: 3rem;
   margin-top: 2rem;
   font-size: 1rem;
+  font-family: 'Oswald';
 }
 
 .info-right {
@@ -430,7 +437,7 @@ a {
 }
 
 .interesting-fact .fact {
-  font-weight: 200;
+  font-weight: 300;
   font-size: .67rem;
   margin-left: 3rem;
 }
@@ -455,7 +462,7 @@ a {
 .img-with-text .text {
   margin-top: .33rem;
   font-size: .5rem;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -471,7 +478,7 @@ a {
 }
 
 .over-wheel-sections section .subsection-title {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .canvas-wheel {
@@ -483,108 +490,259 @@ a {
   display: none;
 }
 
+.desktop, .desktop-flex {
+  display: none;
+}
+
+.religions {
+  overflow: hidden;
+}
+
 html {
   --time-color-first: var(--first-color-antiquity);
   --time-color-second: var(--font-color-antiquity);
 }
 
-.periodization .subperiod-name {
+.subperiod-name {
   font-size: 1rem;
 }
 
-.periodization .subperiods {
+.subperiods {
   margin-top: 6.5rem;
 }
 
-.periodization .greece {
+.periodization .subsection-title {
+  margin-top: 1rem;
+}
+
+.greece {
   font-size: 1rem;
 }
 
-.periodization .greece .subperiods li[data-position='0'] {
+.greece .subperiods li[data-position='0'] {
   z-index: 0;
   left: 0rem;
 }
 
-.periodization .greece .subperiods li[data-position='1'] {
+.greece .subperiods li[data-position='1'] {
   z-index: 1;
   left: 10.33rem;
 }
 
-.periodization .greece .subperiods li[data-position='2'] {
+.greece .subperiods li[data-position='2'] {
   z-index: 2;
   left: 20.66rem;
 }
 
-.periodization .greece .subperiods li[data-position='3'] {
+.greece .subperiods li[data-position='3'] {
   z-index: 3;
   left: 30.99rem;
 }
 
-.periodization .greece .subperiods li[data-position='4'] {
+.greece .subperiods li[data-position='4'] {
   z-index: 4;
   left: 41.32rem;
 }
 
-.periodization .rome {
+.rome {
   font-size: 1.5rem;
 }
 
-.periodization .rome .subperiods li[data-position='0'] {
+.rome .subperiods li[data-position='0'] {
   z-index: 0;
   left: 0rem;
 }
 
-.periodization .rome .subperiods li[data-position='1'] {
+.rome .subperiods li[data-position='1'] {
   z-index: 1;
   left: 10.33rem;
 }
 
-.periodization .rome .subperiods li[data-position='2'] {
+.rome .subperiods li[data-position='2'] {
   z-index: 2;
   left: 20.66rem;
 }
 
-.periodization .krito-micken::before {
+.krito-micken::before {
   background-image: url(../../img/antiquity/krito-micken.jpg);
   background-position: -18.77rem 0;
 }
 
-.periodization .dark-ages::before {
+.dark-ages::before {
   background-image: url(../../img/antiquity/dark-ages.webp);
   background-position: -4rem 0;
 }
 
-.periodization .archaic-greece::before {
+.archaic-greece::before {
   background-image: url(../../img/antiquity/archaic-greece.jpg);
   background-position: -12.7rem 0;
 }
 
-.periodization .classic-greece::before {
+.classic-greece::before {
   background-image: url(../../img/antiquity/classic-greece.jpg);
   background-position: -29.97rem 0;
 }
 
-.periodization .ellinism::before {
+.ellinism::before {
   background-image: url(../../img/antiquity/ellinism.jpg);
   background-position: -16.4rem 0;
 }
 
-.periodization .tsars-time::before {
+.tsars-time::before {
   background-image: url(../../img/antiquity/tsars-time.jpg);
   background-position: -21.9rem 0;
 }
 
-.periodization .republic::before {
+.republic::before {
   background-image: url(../../img/antiquity/roman-republic.jpg);
   background-position: -20.1rem 0;
 }
 
-.periodization .empire:before {
+.empire:before {
   background-image: url(../../img/antiquity/roman-empire.jpg);
   background-position: -21rem 0;
 }
 
 .roman-video img {
   height: 15rem;
+}
+
+@media (min-width: 993px) {
+  .desktop-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .desktop {
+    display: block;
+  }
+  .section-title, .periodization-title {
+    margin-top: 4rem;
+    margin-left: 4rem;
+  }
+  .periodization-title {
+    margin-top: 2rem;
+  }
+  .periodization .subsection-title {
+    margin-left: 9rem;
+  }
+  .periodization ol.subperiods-names {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    height: 20rem;
+    grid-column-gap: 6rem;
+    grid-row-gap: 1rem;
+    margin-left: 6rem;
+  }
+  .periodization ol.subperiods-names .name-wide {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .subperiods {
+    width: 21rem;
+    height: 20rem;
+    left: calc(100vw - 21rem);
+    margin-top: -1rem;
+  }
+  .subperiods li {
+    width: 21rem;
+    height: 20rem;
+  }
+  .subperiods li .subperiod-name {
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+  }
+  .subperiods li .subperiod-time {
+    margin-left: 2.5rem;
+  }
+  .subperiods li .subperiod-social {
+    width: 7rem;
+  }
+  .subperiods li .subperiod-new {
+    margin-left: 3rem;
+    margin-right: -3rem;
+  }
+  .subperiods li::before {
+    width: 22rem;
+    height: 21rem;
+    background-position: 0 0;
+  }
+  .subperiods-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .subsection-title {
+    margin-left: 9rem;
+    margin-top: 2rem;
+  }
+  .information-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .information, .information-with-picture, .interesting-fact {
+    margin-left: 6rem;
+  }
+  .wheel {
+    position: relative;
+    left: 15rem;
+  }
+}
+
+@media (min-width: 993px) {
+  .subperiods {
+    margin-top: 4rem;
+  }
+  .greece .subperiods li[data-position='0'] {
+    z-index: 0;
+    left: 0rem;
+  }
+  .greece .subperiods li[data-position='1'] {
+    z-index: 1;
+    left: 21rem;
+  }
+  .greece .subperiods li[data-position='2'] {
+    z-index: 2;
+    left: 42rem;
+  }
+  .greece .subperiods li[data-position='3'] {
+    z-index: 3;
+    left: 63rem;
+  }
+  .greece .subperiods li[data-position='4'] {
+    z-index: 4;
+    left: 84rem;
+  }
+  .rome .subperiods li[data-position='0'] {
+    z-index: 0;
+    left: 0rem;
+  }
+  .rome .subperiods li[data-position='1'] {
+    z-index: 1;
+    left: 21rem;
+  }
+  .rome .subperiods li[data-position='2'] {
+    z-index: 2;
+    left: 42rem;
+  }
+  .roman-birth-img img {
+    width: 20rem;
+  }
+  .tsitseron img {
+    height: 12rem;
+  }
 }
 /*# sourceMappingURL=antiquity.css.map */
