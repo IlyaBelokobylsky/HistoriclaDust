@@ -38,6 +38,9 @@
     }
     main div.time-straight {
         margin-top: 1.5rem;
+        .time-arrow::after {
+            top: -.6rem;
+        }
         ul.time-straight__periods{
             li.modern, li.new-time, li.middle-ages {
                 margin-left: 0;

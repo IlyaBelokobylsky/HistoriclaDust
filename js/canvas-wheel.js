@@ -77,11 +77,12 @@ function initCanvasWheel() {
         ctx.restore();
     }
 
+    const buttons = Array.from(document.querySelectorAll('.wheel-btn')),
+        informationArr = Array.from(document.querySelector('.over-wheel-sections').children);
     if (document.documentElement.clientWidth < 993) {
         // make margin-top for wheel and buttons,
         // because information elems have position
         // absolute
-        const informationArr = Array.from(document.querySelector('.over-wheel-sections').children);
         let marginTop = 0;
         informationArr.forEach((item, index) => {
             let heightBefore = 0;
@@ -92,7 +93,30 @@ function initCanvasWheel() {
             marginTop =  parseFloat(getComputedStyle(item).height) :
             marginTop = heightBefore;
         });
-        document.querySelector('.wheel-buttons').style.marginTop = `${marginTop + fontSize * 3}px`;
+        document.querySelector('.wheel-buttons').style.marginTop = `${marginTop + fontSize * 3.5}px`;
     }
+
+
+    // slide information
+    buttons.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+            const btn = event.target.closest('.wheel-btn'),
+                direction = +btn.dataset.direction,
+                rotateBefore = parseFloat(wheel.style.transform.slice(7)) || 0;
+            wheel.style.transform = `rotate(${direction * ANGLE + rotateBefore}rad)`;
+            
+            let posAfter = +wheel.dataset.position - direction;
+            if (posAfter == informationArr.length) posAfter = 0;
+            else if (posAfter < 0) posAfter = informationArr.length - 1;
+            const visibleBefore = informationArr[wheel.dataset.position],
+                visibleAfter = informationArr[posAfter];
+            visibleBefore.classList.remove('visible');
+            visibleBefore.classList.add('hidden');
+
+            visibleAfter.classList.remove('hidden');
+            visibleAfter.classList.add('visible');
+            wheel.dataset.position = posAfter;
+        })
+    })
 }
 window.addEventListener('load', initCanvasWheel);

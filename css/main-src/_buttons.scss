@@ -21,6 +21,9 @@
         right: .5rem;
         height: .1rem;
         background: #000;
+        // Время анимации по 2-му клику
+        // transition: property duration delay;
+        transition: top .3s .3s, transform .3s 0s;
     }
 
     .hamburger__line_first {
@@ -37,6 +40,20 @@
     box-shadow: 0 0 .1rem .01rem var(--invisible-color);
 }
 
+.hamburger.menu-clicked .hamburger__line_first,
+.hamburger.menu-clicked .hamburger__line_second,
+.hamburger.menu-clicked .hamburger__line_third {
+    top: 1.05rem;
+    transform: rotate(45deg);
+    transition-delay: 0s;
+    transition: top .3s 0s, transform .3s .3s; // время выполнения по 1-му клику
+}
+
+.hamburger.menu-clicked .hamburger__line_third {
+    transform: rotate(-45deg);
+}
+
+
 
 .wheel-button-svg {
     fill: var(--time-color-second);
@@ -51,8 +68,11 @@
     .wheel-btn {
         height: 3rem;
         cursor: pointer;
-        transition: transform .25s ease-in-out;
-
+        transition: .25s ease-in-out;
+        opacity: .75;
+        &:hover {
+            opacity: 1;
+        }
     }
     .btn-right {
         transform: scaleX(-1);

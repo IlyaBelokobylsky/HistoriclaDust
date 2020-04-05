@@ -42,9 +42,9 @@
     
         <div class="list-wrapper">
             <ol class="subperiods-names">
-                <li class="early">Раннее</li>
-                <li class="developed">Развитое</li>
-                <li class="late name-wide">Позднее</li>
+                <li class="early subperiods-names__active"><span class="link">Раннее</span></li>
+                <li class="developed"><span class="link">Развитое</span></li>
+                <li class="late name-wide"><span class="link">Позднее</span></li>
             </ol>
 
 
@@ -415,7 +415,7 @@
                     </svg>
                 </span>
             </div>
-            <canvas class="canvas-wheel" width="1000" height="1000">
+            <canvas class="canvas-wheel" width="1000" height="1000" data-position="2">
                 К сожалению, ваш браузер яляется устаревшим 
                 и не поддерживает необходимые для данного сайта технологии, 
                 пожалуйста, скачайте новую версию Chrome по 
@@ -440,7 +440,8 @@
             </div>
         </div>
     </section>
-    <sript defer src="js/middle-ages.js"></sript>
-    <script src="js/canvas-wheel.js"></script>
+    <sript async src="js/middle-ages.js"></sript>
+    <script async src="js/canvas-wheel.js"></script>
+    <script async src="js/main.js"></script>
 </body>
 </html>

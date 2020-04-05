@@ -16,7 +16,35 @@
     margin-left: 2rem;
     li {
         cursor: pointer;
-        padding: 1rem 0;
+        &:hover:not(.subperiods-names__active) .link::before {
+            width: 1em;
+            height: 1em;
+            border-width: .08em;
+        }
+        .link {
+            padding: .5rem 0;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -7.5%;
+                width: 0;
+                height: 0;
+                border: 0 solid var(--time-color-second);
+                border-top: none;
+                border-left: none;
+                background: none;
+                border-radius: 0 0 .625em 0;
+                box-shadow: .1em .167em .167em rgba(0, 0, 0, 0.25);
+                transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+        }
+        &.subperiods-names__active .link::before {
+            width: 115%;
+            height: 80%;
+            border-width: .08em;
+        }
     }
 }
 .list-wrapper {
@@ -43,6 +71,7 @@
         font-family: 'Oswald';
         color: var(--font-color-light);
         font-weight: 300;
+        transition: .75s ease;
         .subperiod-name {
             font-family: 'Russo One';
             text-align: center;
@@ -225,6 +254,7 @@
     font-family: 'Oswald';
     position: relative;
     margin-bottom: 2rem;
+    margin-top: -2rem;
     section {
         position: absolute;
         .subsection-title {
@@ -236,6 +266,7 @@
 .canvas-wheel {
     display: block;
     margin: 0 auto;
+    transition: .5s ease-in-out;
 }
 .for-canvas-wheel {
     display: none;
@@ -245,4 +276,7 @@
 }
 .religions {
     overflow: hidden;
+}
+.over-wheel-sections section {
+    transition: .5s ease-in-out;
 }

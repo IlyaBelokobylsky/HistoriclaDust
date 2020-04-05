@@ -38,10 +38,10 @@
     
         <div class="list-wrapper">
             <ol class="subperiods-names">
-                <li class="paleolit">Палеолит</li>
-                <li class="mezolit">Мезолит</li>
-                <li class="neolit">Неолит</li>
-                <li class="bronze-age">Бронзовый <br> век</li>
+                <li class="paleolit subperiods-names__active"><span class="link">Палеолит</span></li>
+                <li class="mezolit"><span class="link">Мезолит</span></li>
+                <li class="neolit"><span class="link">Неолит</span></li>
+                <li class="bronze-age"><span class="link">Бронзовый век</span></li>
             </ol>
 
 
@@ -354,7 +354,7 @@
                     </svg>
                 </span>
             </div>
-            <canvas class="canvas-wheel" width="1000" height="1000">
+            <canvas class="canvas-wheel" width="1000" height="1000" data-position="2">
                 К сожалению, ваш браузер яляется устаревшим 
                 и не поддерживает необходимые для данного сайта технологии, 
                 пожалуйста, скачайте новую версию Chrome по 
@@ -379,6 +379,7 @@
             </div>
         </div>
     </section>
-    <script src="js/canvas-wheel.js"></script>
+    <script async src="js/canvas-wheel.js"></script>
+    <script async src="js/main.js"></script>
 </body>
 </html>

@@ -149,6 +149,10 @@ a {
   right: .5rem;
   height: .1rem;
   background: #000;
+  -webkit-transition: top .3s .3s, -webkit-transform .3s 0s;
+  transition: top .3s .3s, -webkit-transform .3s 0s;
+  transition: top .3s .3s, transform .3s 0s;
+  transition: top .3s .3s, transform .3s 0s, -webkit-transform .3s 0s;
 }
 
 .hamburger .hamburger__line_first {
@@ -163,6 +167,25 @@ a {
   outline: none;
   -webkit-box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
           box-shadow: 0 0 0.1rem 0.01rem var(--invisible-color);
+}
+
+.hamburger.menu-clicked .hamburger__line_first,
+.hamburger.menu-clicked .hamburger__line_second,
+.hamburger.menu-clicked .hamburger__line_third {
+  top: 1.05rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition: top .3s 0s, -webkit-transform .3s .3s;
+  transition: top .3s 0s, -webkit-transform .3s .3s;
+  transition: top .3s 0s, transform .3s .3s;
+  transition: top .3s 0s, transform .3s .3s, -webkit-transform .3s .3s;
+}
+
+.hamburger.menu-clicked .hamburger__line_third {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .wheel-button-svg {
@@ -185,10 +208,13 @@ a {
 .wheel-buttons .wheel-btn {
   height: 3rem;
   cursor: pointer;
-  -webkit-transition: -webkit-transform .25s ease-in-out;
-  transition: -webkit-transform .25s ease-in-out;
-  transition: transform .25s ease-in-out;
-  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  opacity: .75;
+}
+
+.wheel-buttons .wheel-btn:hover {
+  opacity: 1;
 }
 
 .wheel-buttons .btn-right {
@@ -235,7 +261,41 @@ a {
 
 .subperiods-names li {
   cursor: pointer;
-  padding: 1rem 0;
+}
+
+.subperiods-names li:hover:not(.subperiods-names__active) .link::before {
+  width: 1em;
+  height: 1em;
+  border-width: .08em;
+}
+
+.subperiods-names li .link {
+  padding: .5rem 0;
+  position: relative;
+}
+
+.subperiods-names li .link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -7.5%;
+  width: 0;
+  height: 0;
+  border: 0 solid var(--time-color-second);
+  border-top: none;
+  border-left: none;
+  background: none;
+  border-radius: 0 0 .625em 0;
+  -webkit-box-shadow: 0.1em 0.167em 0.167em rgba(0, 0, 0, 0.25);
+          box-shadow: 0.1em 0.167em 0.167em rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.subperiods-names li.subperiods-names__active .link::before {
+  width: 115%;
+  height: 80%;
+  border-width: .08em;
 }
 
 .list-wrapper {
@@ -269,6 +329,8 @@ a {
   font-family: 'Oswald';
   color: var(--font-color-light);
   font-weight: 300;
+  -webkit-transition: .75s ease;
+  transition: .75s ease;
 }
 
 .subperiods li .subperiod-name {
@@ -470,6 +532,7 @@ a {
   font-family: 'Oswald';
   position: relative;
   margin-bottom: 2rem;
+  margin-top: -2rem;
 }
 
 .over-wheel-sections section {
@@ -484,6 +547,8 @@ a {
 .canvas-wheel {
   display: block;
   margin: 0 auto;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .for-canvas-wheel {
@@ -498,6 +563,11 @@ a {
   overflow: hidden;
 }
 
+.over-wheel-sections section {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
 html {
   --time-color-first: var(--first-color-ancient);
   --time-color-second: var(--font-color-ancient);
@@ -505,6 +575,10 @@ html {
 
 .subperiods-names {
   font-size: 1.5rem;
+}
+
+.subperiods-names .bronze-age {
+  font-size: 1.2rem;
 }
 
 .subperiod-name {
@@ -756,7 +830,7 @@ html {
     width: 21rem;
     height: 20rem;
     left: calc(100vw - 21rem);
-    margin-top: -1rem;
+    margin-top: -2.5rem;
   }
   .subperiods li {
     width: 21rem;

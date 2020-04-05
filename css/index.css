@@ -368,7 +368,7 @@ main .time-straight .time-arrow::after {
   display: block;
   position: absolute;
   right: -0.667rem;
-  top: -.6rem;
+  top: -.5rem;
   border-top: .667rem solid transparent;
   border-left: 1rem solid var(--time-color);
   border-bottom: .667rem solid transparent;
@@ -446,6 +446,9 @@ main .time-straight .period-focus {
   }
   main div.time-straight {
     margin-top: 1.5rem;
+  }
+  main div.time-straight .time-arrow::after {
+    top: -.6rem;
   }
   main div.time-straight ul.time-straight__periods li.modern, main div.time-straight ul.time-straight__periods li.new-time, main div.time-straight ul.time-straight__periods li.middle-ages {
     margin-left: 0;
