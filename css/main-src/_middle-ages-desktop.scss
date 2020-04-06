@@ -10,36 +10,48 @@
     .accolade img {
         height: 14rem;
     }
+    h3.subsection-title {
+        margin-top: -7.5rem;
+        margin-left: .5rem;
+        text-align: center;
+        font-size: 1.75rem;
+        font-family: 'Oswald';
+    }
     .slider {
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        .subsection-title {
-            margin-top: -10rem;
-        }
         .slider-images {
             display: flex;
             justify-content: center;
             .img-with-text { 
                 position: relative;
+                display: flex;
+                transition: .5s ease-in-out;
                 img {
                     border-radius: 0;
                     height: 14rem;
                 }
                 &:not(.visible-img) {
                     z-index: -10;
-                    display: none;
+                    transform: scale(0);
                     opacity: 0;
+                    width: 0;
+                    display: none;
                 }
             }
             .active-in-future {
                 transform: scale(0.5);
-                margin-left: -5rem;
-                margin-right: -5rem;
+                margin-left: -4rem;
+                margin-right: -4rem;
                 opacity: 1;
                 z-index: -5;
+                transition: margin .25s, transform .25s ease-out;
                 filter: blur(5px);
+            }
+            .active-img {
+                transform: scale(1);
             }
         }
         .buttons {
@@ -74,13 +86,13 @@
         .slider-left {
             transform: rotate(90deg);
             &:active {
-                transform: rotate(90deg) translateY(1rem); 
+                transform: rotate(90deg) translateY(.5rem); 
             }
         }
         .slider-right {
             transform: rotate(-90deg);
             &:active {
-                transform: rotate(-90deg) translateY(1rem); 
+                transform: rotate(-90deg) translateY(.5rem); 
             }
         }
         .slider-position {
@@ -90,6 +102,8 @@
             margin-left: -3.5rem;
             li {
                 position: relative;
+                transition: .25s ease-in-out;
+                cursor: pointer;
                 top: 0;
                 margin-left: 1rem;
                 border-radius:10px;
@@ -97,7 +111,7 @@
                 height: .3rem;
                 background-color: var(--time-color-first);
             }
-            .active {
+            .slider-position__active {
                 background-color: #4D7198;
             }
         }

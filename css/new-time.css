@@ -532,7 +532,7 @@ a {
   font-family: 'Oswald';
   position: relative;
   margin-bottom: 2rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .over-wheel-sections section {
@@ -547,8 +547,8 @@ a {
 .canvas-wheel {
   display: block;
   margin: 0 auto;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s cubic-bezier(0.5, -0.2, 0, 1);
+  transition: 0.5s cubic-bezier(0.5, -0.2, 0, 1);
 }
 
 .for-canvas-wheel {

@@ -254,7 +254,7 @@
     font-family: 'Oswald';
     position: relative;
     margin-bottom: 2rem;
-    margin-top: -2rem;
+    margin-top: -1rem;
     section {
         position: absolute;
         .subsection-title {
@@ -266,7 +266,7 @@
 .canvas-wheel {
     display: block;
     margin: 0 auto;
-    transition: .5s ease-in-out;
+    transition: .5s cubic-bezier(.5,-0.2,0,1);
 }
 .for-canvas-wheel {
     display: none;
