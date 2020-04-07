@@ -36,8 +36,8 @@ function initMiddleAges() {
 
             
             let currentPos = +beforeActive.dataset.position + +btn.dataset.direction;
-            if (currentPos === imgParentElem.children.length) {
-                currentPosition = 0;
+            if (currentPos == imgParentElem.children.length) {
+                currentPos = 0;
             } else if(currentPos < 0) {
                 currentPos = imgParentElem.children.length - 1;
             }

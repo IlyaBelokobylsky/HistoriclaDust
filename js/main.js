@@ -1,6 +1,35 @@
 function initMain() {
-    const hamburger = document.querySelector('.hamburger');
-        
+    const hamburger = document.querySelector('.hamburger'),
+        header = document.querySelector('header'),
+        navList= document.querySelector('.navigation');
+    
+    function toggleHeader() {
+        hamburger.classList.toggle('menu-clicked');
+        header.classList.toggle('header-visible');
+    }
+    hamburger.addEventListener('click', toggleHeader);
+    navList.addEventListener('click', function(event) {
+        const link = event.target.closest('.nav__link');
+        if (!link || link.classList[1] === 'return-link') return;
+        event.preventDefault();
+        const elemByLink = document.querySelector(`.${link.getAttribute('href')}`)
+        toggleHeader();
+        setTimeout(() => elemByLink.scrollIntoView({block: 'start', behavior: 'smooth'}), 500);
+    })
+
+    const sections = Array.from(document.querySelectorAll('section'));
+
+    sections.forEach(function(item) {
+        let navElem = document.createElement('a');
+        navElem.className = 'nav__link';
+        navElem.innerText = item.dataset.name;
+        navElem.setAttribute('href', item.className) // wo #, because serch will be made by class name
+        navList.append(navElem);
+        navList.append(document.createElement('br'));
+    })
+    
+
+    // click on subperiods names
     let subperiodsNamesArr = [];
     // for antiquity time
     [].forEach.call(document.querySelectorAll('.subperiods-names'), function(item) {

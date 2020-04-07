@@ -1,3 +1,50 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    height: 0;
+    width: 0;
+    background-color: var(--time-color-second);
+    box-shadow: 0 0 .5rem;
+    overflow: hidden;
+    transition: 1s ease;
+    .header__title {
+        font-family: 'Russo One';
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        color: #fff;
+        white-space: nowrap;
+    }
+    .navigation {
+        position: relative;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        height: 14.5rem;
+        justify-content: space-evenly;
+        .nav__link {
+            display: block;
+            font-family: 'Oswald';
+            font-size: 1rem;
+            text-align: right;
+            position: relative;
+            right: 0;
+            color: var(--font-color-light);
+            text-decoration: underline;
+            white-space: nowrap;
+        }
+        .return-link {
+            font-size: 1.5rem;
+        }
+    }
+}
+.header-visible {
+    height: 22rem;
+    width: 22rem;
+    border-radius: 0 0 0 20rem;
+}
 .section-title, .periodization-title {
     font-family: 'Russo One';
     font-size: 2.4rem;
@@ -255,8 +302,9 @@
     position: relative;
     margin-bottom: 2rem;
     margin-top: -1rem;
-    section {
+    >div {
         position: absolute;
+        transition: .5s ease-in-out;
         .subsection-title {
             margin-top: 1rem;
         }
@@ -276,7 +324,4 @@
 }
 .religions {
     overflow: hidden;
-}
-.over-wheel-sections section {
-    transition: .5s ease-in-out;
 }

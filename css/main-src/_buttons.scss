@@ -4,9 +4,9 @@
     background-image: radial-gradient(circle, #fff 0%, #fbfbfb 100%);
     border: .1rem solid var(--invisible-color);
     border-radius: 100%;
-    padding: 1.1rem 1.1rem;
-    top: .25rem;
-    right: .25rem;
+    padding: 1.25rem 1.25rem;
+    top: .5rem;
+    right: .5rem;
     z-index: 999;
     box-shadow: none;
     cursor: pointer;
@@ -16,8 +16,8 @@
     .hamburger__line_third {
         display: block;
         position: absolute;
-        width: 1.25rem;
-        top: 1.05rem;
+        width: 1.5rem;
+        top: 1.2rem;
         right: .5rem;
         height: .1rem;
         background: #000;
@@ -27,11 +27,11 @@
     }
 
     .hamburger__line_first {
-        top: .65rem;
+        top: .6rem;
     }
 
     .hamburger__line_third {
-        top: 1.45rem;
+        top: 1.8rem;
     }
 }
 
@@ -43,7 +43,7 @@
 .hamburger.menu-clicked .hamburger__line_first,
 .hamburger.menu-clicked .hamburger__line_second,
 .hamburger.menu-clicked .hamburger__line_third {
-    top: 1.05rem;
+    top: 1.25rem;
     transform: rotate(45deg);
     transition-delay: 0s;
     transition: top .3s 0s, transform .3s .3s; // время выполнения по 1-му клику
