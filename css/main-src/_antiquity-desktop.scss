@@ -6,7 +6,6 @@
         @for $i from 0 through 4 {
             li[data-position='#{$i}'] {
                 z-index: $i;
-                left: 21rem * $i;
             }
         }
     }

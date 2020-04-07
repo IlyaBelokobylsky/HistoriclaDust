@@ -249,7 +249,7 @@ header {
 
 header .header__title {
   font-family: 'Russo One';
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-left: 1rem;
   margin-top: 1rem;
   color: #fff;
@@ -393,6 +393,11 @@ header .navigation .return-link {
   font-weight: 300;
   -webkit-transition: .75s ease;
   transition: .75s ease;
+  left: 0;
+}
+
+.subperiods li:not([data-position="0"]) {
+  left: 10.33rem;
 }
 
 .subperiods li .subperiod-name {
@@ -639,17 +644,14 @@ html {
 
 .subperiods li[data-position='0'] {
   z-index: 0;
-  left: 0rem;
 }
 
 .subperiods li[data-position='1'] {
   z-index: 1;
-  left: 10.33rem;
 }
 
 .subperiods li[data-position='2'] {
   z-index: 2;
-  left: 20.66rem;
 }
 
 .early::before {
@@ -717,6 +719,9 @@ html {
     width: 21rem;
     height: 20rem;
   }
+  .subperiods li:not([data-position="0"]) {
+    left: 21rem;
+  }
   .subperiods li .subperiod-name {
     margin-top: 2rem;
     margin-left: 2.5rem;
@@ -769,15 +774,12 @@ html {
 @media (min-width: 993px) {
   .subperiods li[data-position='0'] {
     z-index: 0;
-    left: 0rem;
   }
   .subperiods li[data-position='1'] {
     z-index: 1;
-    left: 21rem;
   }
   .subperiods li[data-position='2'] {
     z-index: 2;
-    left: 42rem;
   }
   .landing-in-america img {
     width: 20rem;

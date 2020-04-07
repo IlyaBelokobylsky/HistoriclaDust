@@ -36,7 +36,7 @@ for (let key in periodsObj){
 }
 
 
-function swipeToElement(elem, beforeStraightElem, currentElemObj) {
+function swipeToElement(elem, currentElemObj) {
     // change picture
     // just || 0 doesn't working
     if (!sectionsElem.style.left) sectionsElem.style.left = '0px'
@@ -55,8 +55,12 @@ function swipeToElement(elem, beforeStraightElem, currentElemObj) {
 
 
     // text above straight
-    beforeStraightElem.classList.add('hidden');
-    beforeStraightElem.classList.remove('visible');
+    [].forEach.call(document.querySelector('.time-straight__periods').children, function(item) {
+        if (item !== currentElemObj.element) {
+            item.classList.add('hidden');
+            item.classList.remove('visible');
+        }
+    })
     
     currentElemObj.element.classList.add('visible');
     currentElemObj.element.classList.remove('hidden');
@@ -93,9 +97,8 @@ const swiper = {
     end() {
         const nextPeriod = document.querySelector(`.period-${this.periodPosition + this.direction}`);
         if (nextPeriod) {
-            const currentPeriodObj = this.periods[document.querySelector(`.time-straight__period-${this.periodPosition + this.direction}`).classList[0]],
-                previousStraightPeriod = document.querySelector(`.time-straight__period-${this.periodPosition}`);
-            swipeToElement(nextPeriod, previousStraightPeriod, currentPeriodObj);
+            const currentPeriodObj = this.periods[document.querySelector(`.time-straight__period-${this.periodPosition + this.direction}`).classList[0]];
+            swipeToElement(nextPeriod, currentPeriodObj);
             setTimeout(() => this.period.style.filter = "", 1000) // for future
         } else {
             this.period.style.filter = "";
@@ -153,7 +156,7 @@ let timeStraightObj = {
                 const nextPeriod = document.querySelector(`.period-${item.element.dataset.number}`),
                     previousPeriod = document.elementFromPoint(clientCenterX, clientCenterY).closest('.time-period'),
                     previousStraightPeriod = document.querySelector(`.time-straight__period-${previousPeriod.dataset.number}`);
-                swipeToElement(nextPeriod, previousStraightPeriod, item)
+                swipeToElement(nextPeriod, item)
                 
                 
                 break; // for perfomance

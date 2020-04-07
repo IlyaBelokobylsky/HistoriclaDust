@@ -37,6 +37,9 @@
         li {
             width: 21rem;
             height: 20rem;
+            &:not([data-position="0"]) {
+                left: 21rem;
+            }
             .subperiod-name {
                 margin-top: 2rem;
                 margin-left: 2.5rem;

@@ -6,7 +6,112 @@
     }
 }
 
+.close-test-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: -.5rem;
+    margin-top: 0;
+    padding: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    .lines {
+        position: relative;
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 1.5rem;
+            width: .1rem;
+            background-color: var(--font-color-light);
+            transition: .2s ease;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &:hover .lines {
 
+        &::before {
+            transform: rotate(35deg);
+        }
+        &::after {
+            transform: rotate(-35deg);
+        }
+    }
+    &:active .lines {
+        &::before {
+            transform: rotate(55deg);
+        }
+        &::after {
+            transform: rotate(-55deg);
+        }
+    }
+}
+@keyframes not-answered-test{
+    from {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(-55%);
+    }
+    to {
+        transform: translateX(-45%);
+    }
+}
+.make-answer-btn {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7rem;
+    height: 2rem;
+    text-align: center;
+    background: none;
+    font-size: 1rem;
+    border: 1px solid var(--font-color-light);
+    border-radius: 3rem;
+    font-family: 'Oswald';
+    color: #fff;
+    font-weight: 300;
+    transition: .1s ease-in-out;
+    &::before { 
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -10;
+        background-color: var(--font-color-light);
+        width: 0;
+        height: 0;
+        border-radius: 2rem;
+        top: 50%;
+        left: 50%;
+        transition: .2s ease-in-out;
+    }
+    &:hover{
+        color: var(--font-color-ancient);
+
+        &::before {
+            height: 110%;
+            width: 110%;
+            top: -5%;
+            left: -5%;
+            font-size: 1rem;
+        }
+    }
+    &:active {
+        transform: translateX(-50%) scale(0.95);
+    }
+    &.not-answered{
+        animation: not-answered-test .1s ease .1s infinite alternate;
+    }
+}
 
 .take-test-btn {
     display: block;

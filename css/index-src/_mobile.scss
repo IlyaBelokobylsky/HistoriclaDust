@@ -1,8 +1,65 @@
+.test {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--first-color-ancient) 0%, var(--font-color-ancient) 100%);
+    z-index: 899;
+    border-radius: 1rem;
+    font-family: 'Oswald';
+    padding: 0; 
+    transition: .5s ease-in-out;
+    white-space: nowrap;
+    .question-name {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        color: #fff;
+        font-size: 1rem;
+        transition: .5s ease-in-out;
+    }
+    .test__answers {
+        display: grid;
+        margin: 2rem 1.5rem;
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+        font-weight: 300;
+        color: var(--font-color-light);
+        transition: .5s ease-in-out;
+        li input, li label {
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    }
+    .test__score {
+        display: block;
+        position: absolute;
+        color: var(--font-color-light);
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+.test-visible {
+    width: 20rem;
+    height: 17.5rem;
+    top: calc(50vh - 8.75rem);
+    left: calc(50vw - 10rem);
+}
+
+
+.with-test {
+    z-index: -100;
+    filter: blur(5px) grayscale(.75);
+}
 header {
     margin: 0;
     width: 100vw;
     height: 100vh;
     position: relative;
+    transition: .5s ease-in-out;
     .canvas-header {
         display: block;
         position: absolute;
@@ -10,8 +67,6 @@ header {
         margin: 0;
         top: 0;
         z-index: -999;
-        height: 100vh;
-        width: 100vw;
     }
     h1 {
         margin-left: 2.5rem;
@@ -45,12 +100,51 @@ header {
             color: var(--font-color-light);
         }
     }
+    .images {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 7rem;
+        font-family: 'Oswald';
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            height: 7em;
+        }
+        .images__ancient {
+            padding-left: 2em;
+            transition: 1s ease;
+        }
+        .images__modern {
+            text-align: right;
+            padding-right: 2em;
+            transition: 1s ease;
+        }
+        .moment {
+            display: block;
+            position: absolute;
+            font-size: 4em;
+            color: var(--font-color-light);
+            bottom: -35%;
+            transform: translateX(20%);
+        }
+        &:hover {
+            .images__ancient:not(:hover) {
+                filter: sepia(50%) blur(2px) grayscale(.3);
+            }
+            .images__modern:not(:hover) {
+                filter: sepia(50%) blur(2px) grayscale(.3);
+            }
+        }
+    }
 }
 
 
 main {
+    position: relative;
     height: 100vh;
     overflow: hidden;
+    transition: .5s ease-in-out;
     .sections {
         display: grid;
         position: relative;

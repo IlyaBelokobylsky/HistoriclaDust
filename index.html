@@ -14,6 +14,7 @@
             Пожалуйста, подождите
         </canvas>
     </div>
+    <script src="js/loader.js"></script>
 
     <!-- svg image for <use> -->
     <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
@@ -23,13 +24,35 @@
         </symbol>
     </svg>
 
-    <script src="js/loader.js"></script>
+    <div class="test">
+        <button class="close-test-btn btn"><span class="lines"></span></button>
+        <h5 class="question-name visible"></h5>
+        <ul class="test__answers visible">
+            <li>
+                <input type="radio" name="test__answer" id="test__answer_1">
+                <label for="test__answer_1"></label>
+            </li>
+            <li>
+                <input type="radio" name="test__answer" id="test__answer_2">
+                <label for="test__answer_2"></label>
+            </li>
+            <li>
+                <input type="radio" name="test__answer" id="test__answer_3">
+                <label for="test__answer_3"></label>
+            </li>
+            <li>
+                <input type="radio" name="test__answer" id="test__answer_4">
+                <label for="test__answer_4"></label>
+            </li>
+        </ul>
+        <button class="make-answer-btn btn">Ответить</button>
+        <p class="test__score"><span class="test__right-score"></span>/<span class="test__all-score"></span></p>
+    </div>
     <header>
-        <canvas class="canvas-header" width="1000" height="1000">
+        <canvas class="canvas-header">
             К сожалению, ваш браузер яляется устаревшим 
             и не поддерживает необходимые для данного сайта технологии, 
-            пожалуйста, скачайте новую версию Chrome по 
-            <a href="//www.google.com/intl/ru/chrome/">данной ссылке</a> 
+            пожалуйста, скачайте новую версию Chrome на официальном сайте.
         </canvas>
         <h1>Пыль веков</h1>
         <p class="quote">
@@ -40,6 +63,17 @@
         <button class="btn take-test-btn">
             Пройти тест
         </button>
+        <div class="images">
+            <div class="images__ancient">
+                <img src="img/index/images__ancient.png" alt="">
+                <span class="text">От&nbsp;прошлого</span>
+            </div>
+            <div class="images__modern">
+                <img src="img/index/images__modern.png" alt="">
+                <span class="text">До&nbsp;будущего</span>
+            </div>
+            <span class="moment">90с</span>
+        </div>
         <button class="btn arrow-down-btn">
             <svg style="width: inherit; height: inherit;" viewBox="0 0 90 55">
                 <use xlink:href="#arrow-svg" fill="#CDCDCD"/>
@@ -153,7 +187,8 @@
             <span class="period-focus"></span>
         </div>
     </main>
-    <script async src="js/canvas.js"></script>
+    <script async src="js/index-canvas.js"></script>
     <script defer src="js/index.js"></script>
+    <script async src="js/test.js"></script>
 </body>
 </html>
