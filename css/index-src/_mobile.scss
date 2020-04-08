@@ -12,7 +12,16 @@
     padding: 0; 
     transition: .5s ease-in-out;
     white-space: nowrap;
-    .question-name {
+    .display-none {
+        display: none;
+    }
+    .test_display, .choose-test_display {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        transition: opacity .25s ease-in-out;
+    }
+    .test__head-text {
         margin-top: 1.5rem;
         margin-left: 1rem;
         color: #fff;
@@ -60,14 +69,6 @@ header {
     height: 100vh;
     position: relative;
     transition: .5s ease-in-out;
-    .canvas-header {
-        display: block;
-        position: absolute;
-        padding: 0;
-        margin: 0;
-        top: 0;
-        z-index: -999;
-    }
     h1 {
         margin-left: 2.5rem;
         margin-top: 0;
@@ -79,10 +80,11 @@ header {
     .quote {
         display: block; 
         position: relative;
+        font-size: 1rem;
         margin-left: 6rem;
         margin-top: 2rem;
         font-family: 'Oswald';
-        width: 7rem;
+        width: 7em;
         font-weight: 200;
         b {
             display: block;
@@ -93,7 +95,7 @@ header {
             content: '“';
             display: block;
             position: absolute;
-            font-size: 10rem;
+            font-size: 10em;
             font-weight: normal;
             left: -4rem;
             top: -3.25rem;

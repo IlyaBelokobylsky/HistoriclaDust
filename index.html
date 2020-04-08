@@ -22,44 +22,60 @@
             <path d="M0 0L45 40V55L0 15V0Z"/>
             <path d="M90 0L45 40V55L90 15V0Z"/>
         </symbol>
+        <symbol id="test-button-svg" class="wheel-button-svg">
+            <path d="M18.2264 0.600636C17.7192 0.387455 17.1295 0.50726 16.7381 0.896624L0.400156 13.7809C-0.133385 14.3129 -0.133385 15.1851 0.400156 15.7189L16.7381 28.5415C16.9979 28.8057 17.3489 28.9449 17.7016 28.9449C17.8807 28.9449 18.0579 28.9079 18.2264 28.841C18.7371 28.6278 19.0425 28.1292 19.0425 27.5742V19.8944C36.5142 19.8944 44.1558 24.8416 42.9922 40.5977C50.3933 15.3894 36.1878 9.69167 19.0425 9.69167V1.86563C19.0408 1.31065 18.7371 0.812056 18.2264 0.600636Z"/>
+        </symbol>
     </svg>
 
     <div class="test">
         <button class="close-test-btn btn"><span class="lines"></span></button>
-        <h5 class="question-name visible"></h5>
-        <ul class="test__answers visible">
-            <li>
-                <input type="radio" name="test__answer" id="test__answer_1">
-                <label for="test__answer_1"></label>
-            </li>
-            <li>
-                <input type="radio" name="test__answer" id="test__answer_2">
-                <label for="test__answer_2"></label>
-            </li>
-            <li>
-                <input type="radio" name="test__answer" id="test__answer_3">
-                <label for="test__answer_3"></label>
-            </li>
-            <li>
-                <input type="radio" name="test__answer" id="test__answer_4">
-                <label for="test__answer_4"></label>
-            </li>
-        </ul>
-        <button class="make-answer-btn btn">Ответить</button>
-        <p class="test__score"><span class="test__right-score"></span>/<span class="test__all-score"></span></p>
+        <button class="back-to-choose-btn btn">
+            <svg    style="width: inherit; height: inherit;" viewBox="0 0 90 55">
+                <use fill="#f0f0f0" style="width: inherit; height: inherit;" xlink:href="#test-button-svg"/>
+            </svg>
+        </button>
+        <div class="choose-test_display visible">
+            <h5 class="test__head-text">Выберите уровень сложности</h5>
+            <div class="difficult">
+                <button class="difficult__btn btn" data-difficult="0">Легкий</button>
+                <button class="difficult__btn btn" data-difficult="1">Средний</button>
+                <button class="difficult__btn btn" data-difficult="2">Трудный</button>
+                <button class="difficult__btn btn" data-difficult="3">Очень трудный</button>
+            </div>
+        </div>
+        <div class="test_display hidden display-none">
+            <h5 class="question-name test__head-text"></h5>
+            <ul class="test__answers">
+                <li>
+                    <input type="radio" name="test__answer" id="test__answer_1">
+                    <label for="test__answer_1"></label>
+                </li>
+                <li>
+                    <input type="radio" name="test__answer" id="test__answer_2">
+                    <label for="test__answer_2"></label>
+                </li>
+                <li>
+                    <input type="radio" name="test__answer" id="test__answer_3">
+                    <label for="test__answer_3"></label>
+                </li>
+                <li>
+                    <input type="radio" name="test__answer" id="test__answer_4">
+                    <label for="test__answer_4"></label>
+                </li>
+            </ul>
+            <button class="make-answer-btn btn">Ответить</button>
+            <p class="test__score"><span class="test__right-score"></span>/<span class="test__all-score"></span></p>
+        </div>
     </div>
     <header>
-        <canvas class="canvas-header">
-            К сожалению, ваш браузер яляется устаревшим 
-            и не поддерживает необходимые для данного сайта технологии, 
-            пожалуйста, скачайте новую версию Chrome на официальном сайте.
-        </canvas>
-        <h1>Пыль веков</h1>
-        <p class="quote">
-            Время открывает истину
-            <br>
-            <b>Сенека</b>
-        </p>
+        <div class="wrapper">
+            <h1>Пыль веков</h1>
+            <p class="quote">
+                Время открывает истину
+                <br>
+                <b>Сенека</b>
+            </p>
+        </div>
         <button class="btn take-test-btn">
             Пройти тест
         </button>
