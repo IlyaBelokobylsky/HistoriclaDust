@@ -37,17 +37,13 @@
             if(mbAnswer <= 0) {
                 mbAnswer = this.answer + Math.round(Math.random() * 20);
             }
-            console.log(this.mbAnswers)
             for(let key of this.mbAnswers) {
                 if(mbAnswer == key) {
-                    console.log(key + ' ' +mbAnswer);
                     mbAnswer = parseFloat(this.getMaybeAnswer());
-                    console.log(key + ' ' +mbAnswer);
                     this.mbAnswers.splice(this.mbAnswers.indexOf(key, 0), 1) 
                 }
             }
             if(mbAnswer == this.answer){
-                console.log(this.answer + ' ' +mbAnswer);
                 mbAnswer = parseFloat(this.getMaybeAnswer());
             }
             this.mbAnswers.push(mbAnswer);
