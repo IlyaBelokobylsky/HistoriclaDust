@@ -25,12 +25,16 @@
         margin-top: 1.5rem;
         margin-left: 1rem;
         color: #fff;
-        font-size: 1rem;
+        font-size: .9rem;
         transition: .5s ease-in-out;
     }
     .test__answers {
         display: grid;
         margin: 2rem 1.5rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: .75rem;
         padding: 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
