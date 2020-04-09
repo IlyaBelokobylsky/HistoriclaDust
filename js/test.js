@@ -1,15 +1,10 @@
 'use strict';
 (function() {
     const testElement = document.querySelector('.test'),
-        testDisplay = document.querySelector('.test_display'),
-        chooseTestDisplay = document.querySelector('.choose-test_display'),
         questNameElem = document.querySelector('.question-name'),
-        questList = document.querySelector('.test__answers'),
-        continueBtn = document.querySelector('.make-answer-btn'),
-        rightScoreEl = document.querySelector('.test__right-score'),
-        allScoreEl = document.querySelector('.test__all-score'),
+        makeAnswerBtn = document.querySelector('.make-answer-btn'),
+        continueBtn = document.querySelector('.continue-test-btn'),
         backBtn = document.querySelector('.back-to-choose-btn');
-
     
     class Question {
         constructor(title, answer) {
@@ -225,6 +220,10 @@
                 new NumberQuestion('Назовите дату открытия <br> Суэцкого канала.', 1869, 'год'),
             ]
         ];
+        let rightScoreEl = document.querySelector('.test__right-score'),
+            allScoreEl = document.querySelector('.test__all-score'),
+            questList = document.querySelector('.test__answers');
+
         function _changeQuestion(question) {
             rightScoreEl.innerText = rightScore;
             allScoreEl.innerText = allScore;
@@ -248,22 +247,28 @@
             dNone.classList.add('hidden');
             setTimeout(() => {
                 dNone.classList.add('display-none');
-                dBlock.classList.add('visible');
+                dNone.classList.remove('display-block');
                 dBlock.classList.remove('hidden');
+                dBlock.classList.add('visible');
             }, 250);
-            
             dBlock.classList.remove('display-none');
+            dBlock.classList.add('display-block');
         }
 
+        let testDisplay = document.querySelector('.test_display'),
+            chooseTestDisplay = document.querySelector('.choose-test_display');
         function backToChoose() {
-            if(testDisplay.classList.contains('display-none')) {
+            if(!chooseTestDisplay.classList.contains('display-none')) {
                 backBtn.firstElementChild.classList.add('errored');
-                
                 setTimeout(() => backBtn.firstElementChild.classList.remove('errored'), 500);
                 return;
             }
-            _toggleDisplay(testDisplay, chooseTestDisplay);
-            alert(`Поздравляем, вы набрали ${rightScoreEl.innerText} баллов из ${allScoreEl.innerText}. Отличный результат!`);
+            const dBlock = testElement.querySelector('.display-block');
+            _toggleDisplay(dBlock, chooseTestDisplay);
+            allScore = 0;
+            rightScore = 0;
+            rightScoreEl.innerText = 0;
+            allScoreEl.innerText = 0;
         }
 
         function getDifficult(event) {
@@ -276,57 +281,73 @@
             }
         }
 
-        let necessQuestions; // closure for reusable launch
+        let necessQuestions = []; // closure for reusable launch
         function changeTest() {
-            if(!necessQuestions) necessQuestions = [...questions[difficult]];
-            let pos = Math.round(Math.random() * (necessQuestions.length - 1)),
-                question = necessQuestions[pos];
+            if(!necessQuestions[difficult]) necessQuestions[difficult] = [...questions[difficult]];
+            let pos = Math.round(Math.random() * (necessQuestions[difficult].length - 1)),
+                question = necessQuestions[difficult][pos];
             if(!question) {
-                rightScoreEl.innerText = rightScore;
-                allScoreEl.innerText = allScore;
                 backToChoose();
-                allScore = 0;
-                rightScore = 0;
-                rightScoreEl.innerText = 0;
-                allScoreEl.innerText = 0;
-                questions[difficult].forEach(item => item.reuseMbAnswers());
-                necessQuestions = null;
+                necessQuestions[difficult].forEach(item => item.reuseMbAnswers());
+                necessQuestions[difficult] = null;
                 return false;
             }
-            necessQuestions.splice(pos, 1);
+            necessQuestions[difficult].splice(pos, 1);
             _changeQuestion(question);
             return true;
         }
 
+        const continueDisplay = document.querySelector('.test_show-answer');
         function continueTest() {
+            _toggleDisplay(continueDisplay, testDisplay);
+        }
+
+        function makeAnswer() {
             try {
-                const checkedElem = questList.querySelector('input[name="test__answer"]:checked');
-                const rightAnswer = questNameElem.dataset.answer;
+                const checkedElem = questList.querySelector('input[name="test__answer"]:checked'),
+                    rightAnswer = questNameElem.dataset.answer,
+                    testCheckerElem = document.querySelector('.test__checker'),
+                    rightAnswerElem = document.querySelector('.test__right-answer_show'),
+                    userAnswerElem = document.querySelector('.test__user-answer_show'),
+                    scoreElem = document.querySelector('.test__score_show');
                 if (checkedElem.dataset.answer == rightAnswer) {
                     rightScore++;
+                    testCheckerElem.innerText = 'Поздравляем, ваш ответ верный!';
+                    rightAnswerElem.classList.remove('visible');
+                    rightAnswerElem.classList.add('hidden');
+                    userAnswerElem.firstElementChild.innerText = rightAnswer;
+                    testElement.classList.add('correct-answer');
+                    setTimeout(() => testElement.classList.remove('correct-answer'), 900)
+                    
+                } else {
+                    testCheckerElem.innerText = 'К сожалению, ваш ответ неверный.';
+                    rightAnswerElem.classList.remove('hidden');
+                    rightAnswerElem.classList.add('visible');
+                    userAnswerElem.firstElementChild.innerText = checkedElem.dataset.answer;
+                    rightAnswerElem.firstElementChild.innerText = rightAnswer;
+                    testElement.classList.add('uncorrect-answer');
+                    setTimeout(() => testElement.classList.remove('uncorrect-answer'), 900)
                 }
                 allScore++;
-                function toggleOpacity() {
-                    testDisplay.classList.toggle('hidden');
-                    testDisplay.classList.toggle('visible');
-                }
-                toggleOpacity();
+                scoreElem.innerText = `${rightScore}/${allScore}.`;
+                _toggleDisplay(testDisplay, continueDisplay);
                 setTimeout(function() {
                     checkedElem.checked = false;
                     test.change();
-                }, 500)
-                setTimeout(toggleOpacity, 500)
+                }, 500);
             }
             catch(err) {
-                continueBtn.classList.add('errored');
-                setTimeout(() => continueBtn.classList.remove('errored'), 500)
+                makeAnswerBtn.classList.add('errored');
+                setTimeout(() => makeAnswerBtn.classList.remove('errored'), 500)
                 return;
             }
         }
 
         function closeTest() {
+            if(testDisplay.classList.contains('visible')){
+                backToChoose();
+            }
             testElement.classList.remove('test-visible');
-            alert(`Поздравляем, вы набрали ${rightScoreEl.innerText} баллов из ${allScoreEl.innerText}. Отличный результат!`);
             document.querySelector('header').classList.remove('with-test');
             document.querySelector('main').classList.remove('with-test');
         }
@@ -334,8 +355,9 @@
         return {
             getDifficult: getDifficult,
             change: changeTest,
-            continue: continueTest,
+            makeAnswer: makeAnswer,
             close: closeTest,
+            continue: continueTest,
             backToChoose: backToChoose
         }
     }
@@ -355,5 +377,6 @@
     
     document.querySelector('.difficult').addEventListener('click', test.getDifficult);
 
+    makeAnswerBtn.addEventListener('click', test.makeAnswer);
     continueBtn.addEventListener('click', test.continue);
 })();

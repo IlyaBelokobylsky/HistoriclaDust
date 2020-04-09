@@ -34,7 +34,7 @@
                 <use fill="#f0f0f0" style="width: inherit; height: inherit;" xlink:href="#test-button-svg"/>
             </svg>
         </button>
-        <div class="choose-test_display visible">
+        <div class="choose-test_display visible display-block">
             <h5 class="test__head-text">Выберите уровень сложности</h5>
             <div class="difficult">
                 <button class="difficult__btn btn" data-difficult="0">Легкий</button>
@@ -65,6 +65,12 @@
             </ul>
             <button class="make-answer-btn btn">Ответить</button>
             <p class="test__score"><span class="test__right-score"></span>/<span class="test__all-score"></span></p>
+        </div>
+        <div class="test_show-answer hidden display-none">
+            <h5 class="test__head-text"><span class="test__checker"></span> <br> Ваш счет сейчас составляет: <span class="test__score_show"></span></h5>
+            <p class="test__right-answer_show visible">Правильный ответ: <span class="right-answer"></span></p>
+            <p class="test__user-answer_show">Ваш ответ: <span class="user-answer"></span></p>
+            <button class="continue-test-btn btn">Продолжить</button>
         </div>
     </div>
     <header>

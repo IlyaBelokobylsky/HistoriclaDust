@@ -15,7 +15,7 @@
     .display-none {
         display: none;
     }
-    .test_display, .choose-test_display {
+    .test_display, .choose-test_display,.test_show-answer {
         position: absolute;
         width: inherit;
         height: inherit;
@@ -47,12 +47,26 @@
             vertical-align: middle;
         }
     }
+    p {
+        color: var(--font-color-light);
+        font-family: 'Oswald';
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
     .test__score {
         display: block;
         position: absolute;
         color: var(--font-color-light);
         right: 1rem;
         bottom: 1rem;
+    }
+
+    &.correct-answer {
+        box-shadow: 0 0 2.5rem 1rem rgba(19, 136, 8, .75);
+    }
+    &.uncorrect-answer {
+        box-shadow: 0 0 2.5rem 1rem rgba(191, 20, 8, .75);
     }
 }
 .test-visible {
