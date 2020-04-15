@@ -1,4 +1,4 @@
-'use strict';
+
 (function() {
     const testElement = document.querySelector('.test'),
         questNameElem = document.querySelector('.question-name'),
@@ -11,7 +11,7 @@
             this.title = title;
             this.answer = answer;
         }
-    };
+    }
     class NumberQuestion extends Question {
         constructor(title, answer, type) {
             super(title, parseInt(answer));
@@ -47,7 +47,7 @@
         reuseMbAnswers() {
             return;
         } 
-    };
+    }
     class CenturyQuestion extends NumberQuestion {
         constructor(title, answer, type) {
             super(title, answer, type);
@@ -70,7 +70,7 @@
         reuseMbAnswers() {
             this.mbAnswers = [...this.reusableAnswers];
         }   
-    };
+    }
     
 
     function takeTest() {
@@ -239,7 +239,7 @@
                     lable.innerText = question.getMaybeAnswer();
                 }
                 input.dataset.answer = lable.innerText;
-            })
+            });
         }
 
         function _toggleDisplay(dNone, dBlock) {
@@ -277,7 +277,7 @@
             difficult = +btn.dataset.difficult;
             let canChange = changeTest();
             if(canChange) {
-                _toggleDisplay(chooseTestDisplay, testDisplay)
+                _toggleDisplay(chooseTestDisplay, testDisplay);
             }
         }
 
@@ -317,7 +317,7 @@
                     rightAnswerElem.classList.add('hidden');
                     userAnswerElem.firstElementChild.innerText = rightAnswer;
                     testElement.classList.add('correct-answer');
-                    setTimeout(() => testElement.classList.remove('correct-answer'), 900)
+                    setTimeout(() => testElement.classList.remove('correct-answer'), 900);
                     
                 } else {
                     testCheckerElem.innerText = 'К сожалению, ваш ответ неверный.';
@@ -366,7 +366,7 @@
     let test = takeTest();
     
 
-    document.querySelector('.take-test-btn').addEventListener('click', function(e) {
+    document.querySelector('.take-test-btn').addEventListener('click', function() {
         testElement.classList.add('test-visible');
         document.querySelector('header').classList.add('with-test');
         document.querySelector('main').classList.add('with-test');
