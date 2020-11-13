@@ -764,6 +764,9 @@ html {
     position: relative;
     left: 15rem;
   }
+  .canvas-wheel {
+    width: 25rem;
+  }
 }
 
 @media (min-width: 993px) {

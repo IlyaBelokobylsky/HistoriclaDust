@@ -207,13 +207,13 @@ a {
 }
 
 .test.correct-answer {
-  -webkit-box-shadow: 0 0 2rem 0 rgba(19, 136, 8, 0.5);
-          box-shadow: 0 0 2rem 0 rgba(19, 136, 8, 0.5);
+  -webkit-box-shadow: 0 0 2.5rem 1rem rgba(19, 136, 8, 0.75);
+          box-shadow: 0 0 2.5rem 1rem rgba(19, 136, 8, 0.75);
 }
 
 .test.uncorrect-answer {
-  -webkit-box-shadow: 0 0 2rem 0 rgba(191, 20, 8, 0.5);
-          box-shadow: 0 0 2rem 0 rgba(191, 20, 8, 0.5);
+  -webkit-box-shadow: 0 0 2.5rem 1rem rgba(191, 20, 8, 0.75);
+          box-shadow: 0 0 2.5rem 1rem rgba(191, 20, 8, 0.75);
 }
 
 .test-visible {
