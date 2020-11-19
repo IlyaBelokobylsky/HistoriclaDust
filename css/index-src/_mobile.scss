@@ -1,5 +1,5 @@
 .test {
-    position: absolute;
+    position: fixed;
     top: 50vh;
     left: 50vw;
     width: 0;
@@ -69,18 +69,30 @@
         box-shadow: 0 0 2.5rem 1rem rgba(191, 20, 8, .75);
     }
 }
+.test-background {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 500;
+}
 .test-visible {
     width: 20rem;
     height: 17.5rem;
     top: calc(50vh - 8.75rem);
     left: calc(50vw - 10rem);
+    +.test-background {
+        display: block;
+    }
 }
-
 
 .with-test {
     z-index: -100;
     filter: blur(5px) grayscale(.75);
 }
+
 header {
     margin: 0;
     width: 100vw;

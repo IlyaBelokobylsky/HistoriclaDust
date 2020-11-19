@@ -372,6 +372,7 @@
         document.querySelector('main').classList.add('with-test');
     })
     document.querySelector('.close-test-btn').addEventListener('click', test.close);
+    document.querySelector('.test-background').addEventListener('click', test.close);
 
     backBtn.addEventListener('click', test.backToChoose);
     
