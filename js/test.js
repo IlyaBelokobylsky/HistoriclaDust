@@ -434,6 +434,7 @@
 
     document.querySelector('.take-test-btn').addEventListener('click', function() {
         testElement.classList.add('test-visible');
+        test.backToChoose();
         document.querySelector('header').classList.add('with-test');
         document.querySelector('main').classList.add('with-test');
     });
