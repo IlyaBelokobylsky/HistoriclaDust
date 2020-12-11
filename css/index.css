@@ -198,6 +198,12 @@ a {
   margin-top: 2rem;
 }
 
+.test .test__show-level {
+  margin-left: 1.5rem;
+  max-width: 90%;
+  white-space: normal;
+}
+
 .test .test__score {
   display: block;
   position: absolute;
@@ -656,7 +662,7 @@ main .time-straight .period-focus {
   outline: none;
 }
 
-.close-test-btn {
+.close-test-btn:not(.close-score) {
   background: none;
   border: none;
   position: absolute;
@@ -669,11 +675,11 @@ main .time-straight .period-focus {
   width: 1.5rem;
 }
 
-.close-test-btn .lines {
+.close-test-btn:not(.close-score) .lines {
   position: relative;
 }
 
-.close-test-btn .lines::before, .close-test-btn .lines::after {
+.close-test-btn:not(.close-score) .lines::before, .close-test-btn:not(.close-score) .lines::after {
   content: '';
   display: block;
   position: absolute;
@@ -685,32 +691,32 @@ main .time-straight .period-focus {
   transition: .2s ease;
 }
 
-.close-test-btn .lines::before {
+.close-test-btn:not(.close-score) .lines::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.close-test-btn .lines::after {
+.close-test-btn:not(.close-score) .lines::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.close-test-btn:hover .lines::before {
+.close-test-btn:not(.close-score):hover .lines::before {
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
 }
 
-.close-test-btn:hover .lines::after {
+.close-test-btn:not(.close-score):hover .lines::after {
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
 }
 
-.close-test-btn:active .lines::before {
+.close-test-btn:not(.close-score):active .lines::before {
   -webkit-transform: rotate(55deg);
           transform: rotate(55deg);
 }
 
-.close-test-btn:active .lines::after {
+.close-test-btn:not(.close-score):active .lines::after {
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
 }
@@ -844,7 +850,7 @@ main .time-straight .period-focus {
   }
 }
 
-.make-answer-btn, .continue-test-btn {
+.make-answer-btn, .continue-test-btn, .close-score {
   display: block;
   position: absolute;
   bottom: 2rem;
@@ -865,7 +871,7 @@ main .time-straight .period-focus {
   transition: .1s ease-in-out;
 }
 
-.make-answer-btn::before, .continue-test-btn::before {
+.make-answer-btn::before, .continue-test-btn::before, .close-score::before {
   content: '';
   display: block;
   position: absolute;
@@ -880,11 +886,11 @@ main .time-straight .period-focus {
   transition: .2s ease-in-out;
 }
 
-.make-answer-btn:hover, .continue-test-btn:hover {
+.make-answer-btn:hover, .continue-test-btn:hover, .close-score:hover {
   color: var(--font-color-ancient);
 }
 
-.make-answer-btn:hover::before, .continue-test-btn:hover::before {
+.make-answer-btn:hover::before, .continue-test-btn:hover::before, .close-score:hover::before {
   height: 110%;
   width: 110%;
   top: -5%;
@@ -892,7 +898,7 @@ main .time-straight .period-focus {
   font-size: 1rem;
 }
 
-.make-answer-btn:active, .continue-test-btn:active {
+.make-answer-btn:active, .continue-test-btn:active, .close-score:active {
   -webkit-transform: translateX(-50%) scale(0.95);
           transform: translateX(-50%) scale(0.95);
 }
